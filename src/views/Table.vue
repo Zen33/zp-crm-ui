@@ -356,7 +356,7 @@
         // 是否为树表格
         expand: 'tree',
         // 树表格展开事件
-        expandClick (index, row) {
+        expandClick (index, row) { // 非异步请求
           const getNumber = (min = 10000, max = 99999) => { // 随机数
             return Math.round(Math.random() * (max - min) + min)
           }
@@ -375,8 +375,18 @@
             })
           }
           return data
+        },
+        expandClick: (index, row) => { // 异步请求
+          return this.getData(index, row)
         }
       }
+    }
+  },
+  methods: {
+    async getData (index, row) { // 异步请求用例
+      const res = await fetch(url)
+      const data = await res.json()
+      return data.data.result
     }
   }
 }</code></pre>

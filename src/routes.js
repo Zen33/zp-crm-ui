@@ -29,6 +29,9 @@ export default new Router({
     path: '/timeline',
     component: r => require.ensure([], () => r(require('./views/Timeline.vue')), 'timeline')
   }, {
+    path: '/watermark',
+    component: r => require.ensure([], () => r(require('./views/Watermark.vue')), 'watermark')
+  }, {
     path: '/',
     component: r => require.ensure([], () => r(require('./views/Landing.vue')), 'landing')
   }]
