@@ -41,7 +41,7 @@
         <pre v-highlight><code class="javascript">export default {
   data () {
     return {
-      tlOption1: {
+      tlOption2: {
         data: [{
           // 节点标题
           title: '无内容',
@@ -54,19 +54,21 @@
           // 时间节点形状:square、circle
           dotShape: 'square',
           // 时间节点边框色
-          dotColor: '#9e9e9e',
+          dotColor: 'transparent',
           // 时间节点背景色
-          dotBgColor: '#cfd8dc'
+          dotBgColor: 'transparent'
         }, {
           title: '无内容',
           content: '暂无',
-          lineColor: '#9e9e9e',
-          lineType: 'dashed',
-          dotBgColor: '#cfd8dc'
+          dotColor: 'transparent',
+          dotBgColor: 'transparent',
+          lineColor: '#38adff',
+          lineType: 'dashed'
         }, {
           title: '无内容',
           content: '暂无',
-          dotBgColor: '#cfd8dc'
+          dotColor: 'transparent',
+          dotBgColor: 'transparent'
         }]
       }
     }
@@ -99,18 +101,20 @@
             content: '暂无<br />暂无<br />暂无<br />暂无<br />暂无<br />',
             lineType: 'solid',
             dotShape: 'square',
-            dotColor: '#9e9e9e',
-            dotBgColor: '#cfd8dc'
+            dotColor: 'transparent',
+            dotBgColor: 'transparent'
           }, {
             title: '无内容',
             content: '暂无',
-            lineColor: '#9e9e9e',
-            lineType: 'dashed',
-            dotBgColor: '#cfd8dc'
+            dotColor: 'transparent',
+            dotBgColor: 'transparent',
+            lineColor: '#38adff',
+            lineType: 'dashed'
           }, {
             title: '无内容',
             content: '暂无',
-            dotBgColor: '#cfd8dc'
+            dotColor: 'transparent',
+            dotBgColor: 'transparent'
           }]
         }
       }

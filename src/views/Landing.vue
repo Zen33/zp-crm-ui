@@ -10,6 +10,7 @@
       </p> -->
     </div>
     <div>
+      <!-- <div class="spinner"></div> -->
       组件可以完整引入，也可以部分引入。
       <div class="figure">
         <pre v-highlight><code class="javascript">// 完整引入
@@ -31,4 +32,57 @@ Vue.use(Dropdownlist)</code></pre>
   br {
     margin: 20px;
   }
+  /* .spinner {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    -webkit-animation: spinner 1s linear infinite alternate;
+    -moz-animation: spinner 1s linear infinite alternate;
+    animation: spinner 1s linear infinite alternate;
+    margin: 46px auto;
+    position: relative; 
+    left: -12px;
+  }
+  @-moz-keyframes spinner {
+    0% {
+        background-color: rgba(77, 161, 255, 1);
+        box-shadow: 12px 0px 0px 0px rgba(77, 161, 255,0.2), 24px 0px 0px 0px rgba(77, 161, 255,0.2);
+    }
+    25% {
+        background-color: rgba(77, 161, 255, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(255, 255, 255, 1), 24px 0px 0px 0px rgba(77, 161, 255,0.2);
+    }
+    75% {
+        background-color: rgba(77, 161, 255, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(77, 161, 255,0.2), 24px 0px 0px 0px rgba(77, 161, 255,1);
+    }
+  }
+  @-webkit-keyframes spinner {
+    0% {
+        background-color: rgba(77, 161, 255, 1);
+        box-shadow: 12px 0px 0px 0px rgba(77, 161, 255,0.2), 24px 0px 0px 0px rgba(77, 161, 255,0.2);
+    }
+    25% {
+        background-color: rgba(77, 161, 255, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(255, 255, 255, 1), 24px 0px 0px 0px rgba(77, 161, 255,0.2);
+    }
+    75% {
+        background-color: rgba(77, 161, 255, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(77, 161, 255,0.2), 24px 0px 0px 0px rgba(77, 161, 255,1);
+    }
+  }
+  @keyframes spinner {
+    0% {
+        background-color: rgba(77, 161, 255, 1);
+        box-shadow: 12px 0px 0px 0px rgba(77, 161, 255,0.2), 24px 0px 0px 0px rgba(77, 161, 255,0.2);
+    }
+    25% {
+        background-color: rgba(77, 161, 255, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(255, 255, 255, 1), 24px 0px 0px 0px rgba(77, 161, 255,0.2);
+    }
+    75% {
+        background-color: rgba(77, 161, 255, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(77, 161, 255,0.2), 24px 0px 0px 0px rgba(77, 161, 255,1);
+    }
+  } */
 </style>
