@@ -5,9 +5,9 @@
       <p>
         *该库目前适配Vue 2.x &lt; 2.5，2.5将slot重命名为slot-scope，使用时请适量调整代码，我也将持续更新。
       </p>
-      <!-- <p>
-        *桌面端实例基于Element UI 1.4.x。
-      </p> -->
+      <p>
+        *字体建议：“font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;”。
+      </p>
     </div>
     <div>
       <!-- <div class="spinner"></div> -->
