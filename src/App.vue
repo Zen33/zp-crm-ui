@@ -29,6 +29,9 @@
                 <router-link to="/collapse">折叠面板 Collapse</router-link>
               </li>
               <li>
+                <router-link to="/checkbox">复选框 Checkbox</router-link>
+              </li>
+              <li>
                 <router-link to="/table">表格 Table</router-link>
               </li>
               <li>
@@ -184,6 +187,7 @@
     border-radius: 3px;
     margin-bottom: 20px;
     padding: 10px;
+    font-size: 12px;
   }
   pre {
     background: #f0f0f0;

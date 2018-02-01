@@ -26,6 +26,9 @@ export default new Router({
     path: '/table',
     component: r => require.ensure([], () => r(require('./views/Table.vue')), 'table')
   }, {
+    path: '/checkbox',
+    component: r => require.ensure([], () => r(require('./views/Checkbox.vue')), 'checkbox')
+  }, {
     path: '/timeline',
     component: r => require.ensure([], () => r(require('./views/Timeline.vue')), 'timeline')
   }, {
