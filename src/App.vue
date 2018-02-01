@@ -29,6 +29,9 @@
                 <router-link to="/collapse">折叠面板 Collapse</router-link>
               </li>
               <li>
+                <router-link to="/radio">单选框 Radio</router-link>
+              </li>
+              <li>
                 <router-link to="/checkbox">复选框 Checkbox</router-link>
               </li>
               <li>

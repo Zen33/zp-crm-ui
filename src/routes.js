@@ -29,6 +29,9 @@ export default new Router({
     path: '/checkbox',
     component: r => require.ensure([], () => r(require('./views/Checkbox.vue')), 'checkbox')
   }, {
+    path: '/radio',
+    component: r => require.ensure([], () => r(require('./views/Radio.vue')), 'radio')
+  }, {
     path: '/timeline',
     component: r => require.ensure([], () => r(require('./views/Timeline.vue')), 'timeline')
   }, {
