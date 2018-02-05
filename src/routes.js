@@ -32,6 +32,9 @@ export default new Router({
     path: '/radio',
     component: r => require.ensure([], () => r(require('./views/Radio.vue')), 'radio')
   }, {
+    path: '/switch',
+    component: r => require.ensure([], () => r(require('./views/Switch.vue')), 'switch')
+  }, {
     path: '/timeline',
     component: r => require.ensure([], () => r(require('./views/Timeline.vue')), 'timeline')
   }, {

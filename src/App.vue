@@ -35,6 +35,9 @@
                 <router-link to="/checkbox">复选框 Checkbox</router-link>
               </li>
               <li>
+                <router-link to="/switch">开关 Switch</router-link>
+              </li>
+              <li>
                 <router-link to="/table">表格 Table</router-link>
               </li>
               <li>
