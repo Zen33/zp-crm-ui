@@ -35,6 +35,9 @@ export default new Router({
     path: '/switch',
     component: r => require.ensure([], () => r(require('./views/Switch.vue')), 'switch')
   }, {
+    path: '/cascader',
+    component: r => require.ensure([], () => r(require('./views/Cascader.vue')), 'cascader')
+  }, {
     path: '/timeline',
     component: r => require.ensure([], () => r(require('./views/Timeline.vue')), 'timeline')
   }, {

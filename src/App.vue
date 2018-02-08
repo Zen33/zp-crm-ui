@@ -38,6 +38,9 @@
                 <router-link to="/switch">开关 Switch</router-link>
               </li>
               <li>
+                <router-link to="/cascader">级联菜单 Cascader</router-link>
+              </li>
+              <li>
                 <router-link to="/table">表格 Table</router-link>
               </li>
               <li>
