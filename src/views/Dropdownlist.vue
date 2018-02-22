@@ -17,16 +17,12 @@
   data () {
     return {
       ddlOption1: {
-        // key关键字属性名（对应data中的key）
-        key: 'key',
-        // value关键字属性名（对应data中的value）
-        value: 'value',
         data: [{
-          key: 0,
-          value: 'TBD'
+          value: 0,
+          label: 'TBD'
         }, {
-          key: 1,
-          value: 'Others'
+          value: 1,
+          label: 'Others'
         }],
         // 当前下拉菜单的堆叠顺序（默认为999），通常为了不被遮挡，可定制该属性
         zIndex: 5
@@ -52,49 +48,47 @@
   data () {
     return {
       ddlOption2: {
-        key: 'key',
-        value: 'value',
         data: [{
-          key: 0,
-          value: 'TBD',
+          value: 0,
+          label: 'TBD',
           // 样式自定义，通常用于定制icon
           itemClass: 'arrow'
         }, {
-          key: 1,
-          value: 'Others',
+          value: 1,
+          label: 'Others',
           children: [{
-            key: 2,
-            value: 'Item 1',
+            value: 2,
+            label: 'Item 1',
             children: [{
-              key: 11,
-              value: 'Item 1 - 1'
+              value: 11,
+              label: 'Item 1 - 1'
             }]
           }, {
-            key: 3,
-            value: 'Item 2',
+            value: 3,
+            label: 'Item 2',
             children: [{
-              key: 5,
-              value: 'Item 2 - 1'
+              value: 5,
+              label: 'Item 2 - 1'
             }, {
-              key: 6,
-              value: 'Item 2 - 2'
+              value: 6,
+              label: 'Item 2 - 2'
             }, {
-              key: 7,
-              value: 'Item 2 - 3',
+              value: 7,
+              label: 'Item 2 - 3',
               children: [{
-                key: 10,
-                value: 'Last'
+                value: 10,
+                label: 'Last'
               }]
             }, {
-              key: 8,
-              value: 'Item 2 - 4'
+              value: 8,
+              label: 'Item 2 - 4'
             }, {
-              key: 9,
-              value: 'Item 2 - 5'
+              value: 9,
+              label: 'Item 2 - 5'
             }]
           }, {
-            key: 4,
-            value: 'Item 3'
+            value: 4,
+            label: 'Item 3'
           }]
         }],
         zIndex: 4
@@ -144,20 +138,18 @@
   data () {
     return {
       ddlOption4: {
-        key: 'key',
-        value: 'value',
         data: [{
-          key: 0,
-          value: 'Aquaman'
+          value: 0,
+          label: 'Aquaman'
         }, {
-          key: 1,
-          value: 'Arisia Rrab'
+          value: 1,
+          label: 'Arisia Rrab'
         }, {
-          key: 2,
-          value: 'Batman'
+          value: 2,
+          label: 'Batman'
         }, {
-          key: 3,
-          value: 'Doctor Fate'
+          value: 3,
+          label: 'Doctor Fate'
         }],
         // 设置可查询
         editable: true,
@@ -179,8 +171,6 @@
   data () {
     return {
       ddlOption5: {
-        key: 'key',
-        value: 'value',
         // 异步请求uri
         url: './ddl.json',
         // 返回数据对象值
@@ -203,17 +193,17 @@
         <pre v-highlight><code class="json">{
   "data": {
     "result": [{
-      "key": 0,
-      "value": "Aquaman"
+      "value": 0,
+      "label": "Aquaman"
     }, {
-      "key": 1,
-      "value": "Arisia Rrab"
+      "value": 1,
+      "label": "Arisia Rrab"
     }, {
-      "key": 2,
-      "value": "Batman"
+      "value": 2,
+      "label": "Batman"
     }, {
-      "key": 3,
-      "value": "Doctor Fate"
+      "value": 3,
+      "label": "Doctor Fate"
     }]
   }
 }</code></pre>
@@ -227,60 +217,60 @@
     data () {
       return {
         ddlOption1: {
-          key: 'key',
-          value: 'value',
+          value: 'key',
+          label: 'value',
           data: [{
-            key: 0,
-            value: 'TBD'
+            value: 0,
+            label: 'TBD'
           }, {
-            key: 1,
-            value: 'Others'
+            value: 1,
+            label: 'Others'
           }],
           zIndex: 5
         },
         ddlOption2: {
-          key: 'key',
-          value: 'value',
+          value: 'key',
+          label: 'value',
           data: [{
-            key: 0,
-            value: 'TBD',
+            value: 0,
+            label: 'TBD',
             itemClass: 'arrow'
           }, {
-            key: 1,
-            value: 'Others',
+            value: 1,
+            label: 'Others',
             children: [{
-              key: 2,
-              value: 'Item 1',
+              value: 2,
+              label: 'Item 1',
               children: [{
-                key: 11,
-                value: 'Item 1 - 1'
+                value: 11,
+                label: 'Item 1 - 1'
               }]
             }, {
-              key: 3,
-              value: 'Item 2',
+              value: 3,
+              label: 'Item 2',
               children: [{
-                key: 5,
-                value: 'Item 2 - 1'
+                value: 5,
+                label: 'Item 2 - 1'
               }, {
-                key: 6,
-                value: 'Item 2 - 2'
+                value: 6,
+                label: 'Item 2 - 2'
               }, {
-                key: 7,
-                value: 'Item 2 - 3',
+                value: 7,
+                label: 'Item 2 - 3',
                 children: [{
-                  key: 10,
-                  value: 'Last'
+                  value: 10,
+                  label: 'Last'
                 }]
               }, {
-                key: 8,
-                value: 'Item 2 - 4'
+                value: 8,
+                label: 'Item 2 - 4'
               }, {
-                key: 9,
-                value: 'Item 2 - 5'
+                value: 9,
+                label: 'Item 2 - 5'
               }]
             }, {
-              key: 4,
-              value: 'Item 3'
+              value: 4,
+              label: 'Item 3'
             }]
           }],
           zIndex: 4
@@ -292,27 +282,27 @@
           setDefault: true
         },
         ddlOption4: {
-          key: 'key',
-          value: 'value',
+          value: 'key',
+          label: 'value',
           data: [{
-            key: 0,
-            value: 'Aquaman'
+            value: 0,
+            label: 'Aquaman'
           }, {
-            key: 1,
-            value: 'Arisia Rrab'
+            value: 1,
+            label: 'Arisia Rrab'
           }, {
-            key: 2,
-            value: 'Batman'
+            value: 2,
+            label: 'Batman'
           }, {
-            key: 3,
-            value: 'Doctor Fate'
+            value: 3,
+            label: 'Doctor Fate'
           }],
           editable: true,
           zIndex: 2
         },
         ddlOption5: {
-          key: 'key',
-          value: 'value',
+          value: 'key',
+          label: 'value',
           url: './ddl.json',
           dotNotation: 'data.result',
           zIndex: 1,

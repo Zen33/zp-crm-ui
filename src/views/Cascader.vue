@@ -190,6 +190,70 @@
 }</code></pre>
       </div>
     </div>
+<h3>仅显示末位级</h3>
+    <div class="demo">
+      <zp-cascader :cas-option="casOption4"/>
+      <div class="figure">
+        <pre v-highlight><code class="html">&lt;zp-cascader :cas-option="casOption4" /&gt;</code></pre>
+      </div>
+      <div class="figure">
+        <pre v-highlight>
+          <code class="javascript">export default {
+  data () {
+    return {
+      casOption4: {
+        // 是否显示全部级联
+        allLevels: false,
+        data: [{
+          value: 0,
+          label: 'TBD',
+          // 样式自定义，通常用于定制icon
+          itemClass: 'arrow'
+        }, {
+          value: 1,
+          label: 'Others',
+          children: [{
+            value: 2,
+            label: 'Item 1',
+            children: [{
+              value: 11,
+              label: 'Item 1 - 1'
+            }]
+          }, {
+            value: 3,
+            label: 'Item 2',
+            children: [{
+              value: 5,
+              label: 'Item 2 - 1'
+            }, {
+              value: 6,
+              label: 'Item 2 - 2'
+            }, {
+              value: 7,
+              label: 'Item 2 - 3',
+              children: [{
+                value: 10,
+                label: 'Last'
+              }]
+            }, {
+              value: 8,
+              label: 'Item 2 - 4'
+            }, {
+              value: 9,
+              label: 'Item 2 - 5'
+            }]
+          }, {
+            value: 4,
+            label: 'Item 3'
+          }]
+        }],
+        zIndex: 0
+      }
+    }
+  }
+}</code></pre>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -198,7 +262,7 @@
     data () {
       return {
         casOption1: {
-          width: 300,
+          width: 170,
           data: [{
             value: 0,
             label: 'TBD',
@@ -336,6 +400,54 @@
             }]
           }],
           zIndex: 4
+        },
+        casOption4: {
+          // 是否显示全部级联
+          allLevels: false,
+          data: [{
+            value: 0,
+            label: 'TBD',
+            // 样式自定义，通常用于定制icon
+            itemClass: 'arrow'
+          }, {
+            value: 1,
+            label: 'Others',
+            children: [{
+              value: 2,
+              label: 'Item 1',
+              children: [{
+                value: 11,
+                label: 'Item 1 - 1'
+              }]
+            }, {
+              value: 3,
+              label: 'Item 2',
+              children: [{
+                value: 5,
+                label: 'Item 2 - 1'
+              }, {
+                value: 6,
+                label: 'Item 2 - 2'
+              }, {
+                value: 7,
+                label: 'Item 2 - 3',
+                children: [{
+                  value: 10,
+                  label: 'Last'
+                }]
+              }, {
+                value: 8,
+                label: 'Item 2 - 4'
+              }, {
+                value: 9,
+                label: 'Item 2 - 5'
+              }]
+            }, {
+              value: 4,
+              label: 'Item 3'
+            }]
+          }],
+          zIndex: 0
         }
       }
     },
