@@ -113,8 +113,8 @@
         data: [10, 50, 100],
         width: 60,
         zIndex: 3,
-        // 设置默认值
-        setDefault: true
+        // 设置默认值（暂不支持无限子菜单场景）
+        setDefault: 50
       }
     }
   },
@@ -279,7 +279,7 @@
           data: [10, 50, 100],
           width: 60,
           zIndex: 3, // 防止彼此遮挡
-          setDefault: true
+          setDefault: 50
         },
         ddlOption4: {
           value: 'key',

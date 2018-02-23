@@ -44,6 +44,9 @@
                 <router-link to="/table">表格 Table</router-link>
               </li>
               <li>
+                <router-link to="/pagination">分页 Pagination</router-link>
+              </li>
+              <li>
                 <router-link to="/timeline">时间轴 Timeline</router-link>
               </li>
               <li>

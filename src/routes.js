@@ -26,6 +26,9 @@ export default new Router({
     path: '/table',
     component: r => require.ensure([], () => r(require('./views/Table.vue')), 'table')
   }, {
+    path: '/pagination',
+    component: r => require.ensure([], () => r(require('./views/Pagination.vue')), 'pagination')
+  }, {
     path: '/checkbox',
     component: r => require.ensure([], () => r(require('./views/Checkbox.vue')), 'checkbox')
   }, {
