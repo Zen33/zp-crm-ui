@@ -106,7 +106,7 @@
                   ddlOption: {
                     data: [10, 50, 100],
                     width: 60,
-                    setDefault: true
+                    setDefault: 10
                   }
                 },
                 style: {
@@ -471,7 +471,7 @@
                     ddlOption: {
                       data: [10, 50, 100],
                       width: 60,
-                      setDefault: true
+                      setDefault: 10
                     }
                   },
                   style: {
@@ -739,5 +739,8 @@
   }
   .item-center {
     text-align: center;
+  }
+  .zp-table-row .zp-ddl input {
+    height: 25px;
   }
 </style>
