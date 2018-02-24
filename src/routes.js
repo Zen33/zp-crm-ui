@@ -47,6 +47,9 @@ export default new Router({
     path: '/watermark',
     component: r => require.ensure([], () => r(require('./views/Watermark.vue')), 'watermark')
   }, {
+    path: '/dialog',
+    component: r => require.ensure([], () => r(require('./views/Dialog.vue')), 'dialog')
+  }, {
     path: '/',
     component: r => require.ensure([], () => r(require('./views/Landing.vue')), 'landing')
   }]

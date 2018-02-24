@@ -47,6 +47,9 @@
                 <router-link to="/pagination">分页 Pagination</router-link>
               </li>
               <li>
+                <router-link to="/dialog">对话框 Dialog</router-link>
+              </li>
+              <li>
                 <router-link to="/timeline">时间轴 Timeline</router-link>
               </li>
               <li>

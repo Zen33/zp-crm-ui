@@ -47,7 +47,7 @@
   },
   methods: {
     onChangePage (page) {
-      alert(page)
+      // 页面切换事件
     }
   }
 }</code></pre>
@@ -74,7 +74,7 @@
     },
     methods: {
       onChangePage (page) {
-        alert(page)
+        // ...
       }
     }
   }
