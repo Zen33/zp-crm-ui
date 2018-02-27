@@ -45,7 +45,7 @@
     <div class="demo">
         <zp-switch v-model="switch2" :width="width" :height="height" on-color="#ff8400" off-color="#006699" on-text="on" off-text="off" />
       <div class="figure">
-        <pre v-highlight><code class="html">&lt;zp-switch-group v-model="switch2"
+        <pre v-highlight><code class="html">&lt;zp-switch v-model="switch2"
   :width="width"
   :height="height"
   on-color="#ff8400"
