@@ -213,6 +213,9 @@
   .json:before {
     content: 'JSON';
   }
+  .other:before {
+    content: '';
+  }
   .figure {
     position: relative;
     margin-top: 10px;
@@ -228,5 +231,9 @@
   }
   code.html {
     padding: 20px 0.5em;
+  }
+  .hljs {
+    border: 1px solid #ccc;
+    border-radius: 5px;
   }
 </style>
