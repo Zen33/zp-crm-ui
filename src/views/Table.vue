@@ -94,8 +94,8 @@
             return h('div', [
               h('Button', {
                 on: {
-                  click () {
-                    alert(row.age)
+                  click: () => {
+                    this.$alert(row.age)
                   }
                 },
                 'class': 'zp-btn'
@@ -134,8 +134,8 @@
         // 表格高度
         height: 200,
         // 点击行事件
-        rowClick (evt, row) {
-          alert(JSON.stringify(row))
+        rowClick: (evt, row) => {
+          this.$alert(JSON.stringify(row), '当前行数据')
         }
       }
     }
@@ -263,7 +263,7 @@
               return h('div', {
                 'class': `zp-btn${honerClass}`,
                 on: {
-                  click (evt) {
+                  click: evt => {
                     const expand = evt.target.previousElementSibling
                     expand && expand.click()
                   }
@@ -460,8 +460,8 @@
               return h('div', [
                 h('Button', {
                   on: {
-                    click () {
-                      alert(row.age)
+                    click: () => {
+                      this.$alert(row.age)
                     }
                   },
                   'class': 'zp-btn'
@@ -497,8 +497,8 @@
           }],
           emptyText: '暂无数据',
           height: 200,
-          rowClick (evt, row) {
-            alert(JSON.stringify(row))
+          rowClick: (evt, row) => {
+            this.$alert(JSON.stringify(row), '当前行数据')
           }
         },
         tableOption3: {
@@ -588,7 +588,7 @@
               return h('div', {
                 'class': `zp-btn${honerClass}`,
                 on: {
-                  click (evt) {
+                  click: evt => {
                     const expand = evt.target.previousElementSibling
                     expand && expand.click()
                   }
@@ -686,23 +686,6 @@
   }
   .zp-table-wrapper-800 {
     width: 800px;
-  }
-  .zp-btn {
-    padding: 7px 9px;
-    font-size: 12px;
-    border-radius: 4px;
-    color: #fff;
-    background-color: #54a5ff;
-    border: none;
-    display: inline-block;
-    line-height: 1;
-    white-space: nowrap;
-    cursor: pointer;
-    -webkit-appearance: none;
-    text-align: center;
-    box-sizing: border-box;
-    outline: none;
-    font-weight: normal;
   }
   .non-border th,
   .non-border td {

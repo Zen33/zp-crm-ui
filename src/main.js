@@ -13,6 +13,7 @@ Vue.use(ZpUI)
 // Vue.use(Experience)
 // Vue.use(AnimateNumber)
 // Vue.use(CircleProgress)
+
 Vue.use(Highlight)
 
 Vue.filter('substring', (value, len, hasDot) => { // 字串截取（含中文）

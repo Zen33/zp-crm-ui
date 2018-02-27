@@ -4,12 +4,12 @@
     <p>基于交互的模态窗体。</p>
     <h3>基础对话框</h3>
     <div class="demo">
-      <button @click="dgOption1.visible = true">打开</button>
+      <button class="zp-btn" @click="dgOption1.visible = true">打开</button>
       <zp-dialog :dgOption="dgOption1">
         <div slot="body">这是一个对话框。</div>
       </zp-dialog>
       <div class="figure">
-        <pre v-highlight><code class="html">&lt;button @click="dgOption.visible = true"&gt;打开&lt;/button&gt;
+        <pre v-highlight><code class="html">&lt;button class="zp-btn" @click="dgOption.visible = true"&gt;打开&lt;/button&gt;
 &lt;zp-dialog :dgOption="dgOption1"&gt;
   &lt;div slot="body">这是一个对话框。&lt;/div&gt;
 &lt;/zp-dialog&gt;</code></pre>
@@ -28,7 +28,7 @@
     </div>
     <h3>定制对话框</h3>
     <div class="demo">
-      <button @click="dgOption2.visible = true">打开</button>
+      <button class="zp-btn" @click="dgOption2.visible = true">打开</button>
       <zp-dialog :dgOption="dgOption2">
         <div slot="header">标题</div>
         <div slot="body">当前窗体宽度为：
@@ -36,7 +36,7 @@
         </div>
       </zp-dialog>
       <div class="figure">
-        <pre v-highlight><code class="html">&lt;button @click="dgOption.visible = true"&gt;打开&lt;/button&gt;
+        <pre v-highlight><code class="html">&lt;button class="zp-btn" @click="dgOption.visible = true"&gt;打开&lt;/button&gt;
 &lt;zp-dialog :dgOption="dgOption1"&gt;
   &lt;div slot="header">标题&lt;/div&gt;
   &lt;div slot="body">当前窗体宽度为：

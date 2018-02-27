@@ -121,7 +121,7 @@
   methods: {
     // 定制回调事件
     onSelectItem (val) {
-      alert(val)
+      this.$alert(val, '选择项')
     }
   }
 }</code></pre>
@@ -178,7 +178,7 @@
         zIndex: 1,
         // 回调事件
         onSelect (val) {
-          alert(val)
+          this.$alert(val)
         },
         // 异常处理
         onFail (e) {
@@ -307,14 +307,14 @@
           dotNotation: 'data.result',
           zIndex: 1,
           onSelect (val) {
-            alert(val)
+            this.$alert(val, '选择项')
           }
         }
       }
     },
     methods: {
       onSelectItem (val) {
-        alert(val)
+        this.$alert(val)
       }
     }
   }

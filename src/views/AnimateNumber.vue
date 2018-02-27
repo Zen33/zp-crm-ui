@@ -5,10 +5,10 @@
     <h3>基础动态数字显示</h3>
     <div class="demo">
       <zp-animate-number :anOption="anOption1" ref="an1" />
-      <button @click="playAn1">播放</button>
+      <button class="zp-btn" @click="playAn1">播放</button>
       <div class="figure">
         <pre v-highlight><code class="html">&lt;zp-animate-number :anOption="anOption1" ref="an1" /&gt;
-&lt;button @click="playAn1"&gt;播放&lt;/button&gt;</code></pre>
+&lt;button class="zp-btn" @click="playAn1"&gt;播放&lt;/button&gt;</code></pre>
       </div>
       <div class="figure">
         <pre v-highlight>
@@ -34,10 +34,10 @@
     <h3>渐变色动态数字显示</h3>
     <div class="demo">
       <zp-animate-number :anOption="anOption2" ref="an2" />
-      <button @click="playAn2">重播</button>
+      <button class="zp-btn" @click="playAn2">重播</button>
       <div class="figure">
         <pre v-highlight><code class="html">&lt;zp-animate-number :anOption="anOption1" ref="an1" /&gt;
-&lt;button @click="playAn2"&gt;重播&lt;/button&gt;</code></pre>
+&lt;button class="zp-btn" @click="playAn2"&gt;重播&lt;/button&gt;</code></pre>
       </div>
       <div class="figure">
         <pre v-highlight><code class="javascript">export default {
@@ -73,10 +73,10 @@
     <h3>定制动态数字显示</h3>
     <div class="demo big-font-number">
       <zp-animate-number :anOption="anOption3" @an-action="setNum" ref="an3" />
-      <button @click="goOnAn3">继续</button>
+      <button class="zp-btn" @click="goOnAn3">继续</button>
       <div class="figure">
         <pre v-highlight><code class="html">&lt;zp-animate-number :anOption="anOption3" @an-action="setNum" ref="an3" /&gt;
-&lt;button @click="goOnAn3"&gt;继续&lt;/button&gt;</code></pre>
+&lt;button class="zp-btn" @click="goOnAn3"&gt;继续&lt;/button&gt;</code></pre>
       </div>
       <div class="figure">
         <pre v-highlight><code class="javascript">export default {

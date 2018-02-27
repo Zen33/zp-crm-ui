@@ -50,6 +50,9 @@ export default new Router({
     path: '/dialog',
     component: r => require.ensure([], () => r(require('./views/Dialog.vue')), 'dialog')
   }, {
+    path: '/message',
+    component: r => require.ensure([], () => r(require('./views/Message.vue')), 'message')
+  }, {
     path: '/',
     component: r => require.ensure([], () => r(require('./views/Landing.vue')), 'landing')
   }]

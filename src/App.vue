@@ -4,9 +4,6 @@
       <div class="header">
         <router-link to="/" class="zp-logo"></router-link>
         <div class="nav">
-          <!-- <zp-dropdownlist class="nav-item" :ddl-option="navOption" @ddl-action="changeRouter">
-            <a slot="ddlSelf" href="javascript:;">桌面端实例</a>
-          </zp-dropdownlist> -->
         </div>
       </div>
       <div class="sidebar-outer">
@@ -50,6 +47,9 @@
                 <router-link to="/dialog">对话框 Dialog</router-link>
               </li>
               <li>
+                <router-link to="/message">消息对话框 Message</router-link>
+              </li>
+              <li>
                 <router-link to="/timeline">时间轴 Timeline</router-link>
               </li>
               <li>
@@ -64,43 +64,24 @@
   </div>
 </template>
 
-<script>
-  export default {
-    data () {
-      return {
-        navOption: {
-          key: 'key',
-          value: 'value',
-          data: [{
-            key: 0,
-            value: '图表 Chart',
-            children: [{
-              key: 2,
-              value: '折线'
-            }, {
-              key: 3,
-              value: 'Demo2',
-              children: [{
-                key: 4,
-                value: 'SubTree'
-              }]
-            }]
-          }, {
-            key: 'treeGridTable',
-            value: '树表格 Tree Grid Table'
-          }]
-        }
-      }
-    },
-    methods: {
-      changeRouter (val) {
-        console.log(val)
-      }
-    }
-  }
-</script>
-
 <style>
+  .zp-btn {
+    padding: 7px 9px;
+    font-size: 12px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #54a5ff;
+    border: none;
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-appearance: none;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    font-weight: normal;
+  }
   .zp-logo {
     width: 100px;
     height: 30px;
