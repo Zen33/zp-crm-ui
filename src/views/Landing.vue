@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="quickstart">
     <h2>快速上手</h2>
     <p>该组件的意义在于补充现有UI组件业务，欢迎加入一并完善该UI库。mail: zhen.tang@zhaopin.com.cn</p>
     <p>*该库目前适配Vue 2.x &lt; 2.5，2.5将slot重命名为slot-scope，使用时请适量调整代码，该组件库将持续更新。</p>
@@ -147,6 +147,9 @@ npm run dev</code></pre>
 </template>
 
 <style>
+  .quickstart .figure {
+    margin: 0 10px;
+  }
   br {
     margin: 20px;
   }
