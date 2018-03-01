@@ -1,7 +1,9 @@
 var path = require('path')
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var UglifyJsPlugin = require('uglifyes-webpack-plugin')
 var env = process.env.NODE_ENV
+
 module.exports = {
   entry: ['babel-polyfill', './src/main.js'],
   output: (function () {
@@ -95,7 +97,8 @@ if (env === 'production') {
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: 'dependency'
     }),
-    new webpack.optimize.UglifyJsPlugin({
+    // new webpack.optimize.UglifyJsPlugin({
+    new UglifyJsPlugin({
       sourceMap: true,
       compress: {
         warnings: false

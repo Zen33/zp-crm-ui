@@ -15,10 +15,8 @@
     "vue-router": "^2.3.0"
   },
   "devDependencies": {
-    "highlight.js": "^9.12.0",
     "babel-core": "^6.23.1",
     "babel-loader": "^6.4.0",
-    "babel-runtime": "^6.26.0",
     "babel-plugin-component": "^0.10.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -26,17 +24,21 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-stage-2": "^6.24.1",
+    "babel-runtime": "^6.26.0",
     "cross-env": "^3.2.3",
     "css-loader": "^0.26.2",
     "file-loader": "^0.10.1",
+    "highlight.js": "^9.12.0",
     "html-webpack-plugin": "^2.30.1",
     "style-loader": "^0.13.2",
+    "uglify-js-es6": "^2.8.9",
+    "uglifyes-webpack-plugin": "^0.4.3",
     "url-loader": "^0.5.8",
     "vue-loader": "^11.1.4",
     "vue-style-loader": "^2.0.3",
     "vue-template-compiler": "^2.2.1",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1",
-    "zp-crm-ui": "^0.1.11"
+    "zp-crm-ui": "^0.1.30"
   }
 }
