@@ -39,7 +39,9 @@
     "url-loader": "^0.5.8",
     "vue-loader": "^11.1.4",
     "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.1"
+    "webpack-dev-server": "^2.4.1",
+    "uglify-js-es6": "^2.8.9",
+    "uglifyes-webpack-plugin": "^0.4.3",
   }
 }</code></pre>
     </div>
@@ -47,6 +49,7 @@
     <div class="figure">
       <pre v-highlight><code class="javascript">var path = require('path')
 var webpack = require('webpack')
+var UglifyJsPlugin = require('uglifyes-webpack-plugin')
 
 module.exports = {
   entry: './src/main.js',
@@ -95,7 +98,8 @@ if (process.env.NODE_ENV === 'production') {
         NODE_ENV: '"production"'
       }
     }),
-    new webpack.optimize.UglifyJsPlugin({
+    // new webpack.optimize.UglifyJsPlugin({
+    new UglifyJsPlugin({
       compress: {
         warnings: false
       }

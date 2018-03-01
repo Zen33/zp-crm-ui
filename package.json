@@ -1,6 +1,6 @@
 {
   "name": "zp-ui-doc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "",
   "scripts": {
@@ -12,7 +12,8 @@
   "license": "MIT",
   "dependencies": {
     "vue": "^2.2.1",
-    "vue-router": "^2.3.0"
+    "vue-router": "^2.3.0",
+    "zp-crm-ui": "^0.1.30"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
@@ -38,7 +39,6 @@
     "vue-style-loader": "^2.0.3",
     "vue-template-compiler": "^2.2.1",
     "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.1",
-    "zp-crm-ui": "^0.1.30"
+    "webpack-dev-server": "^2.4.1"
   }
 }
