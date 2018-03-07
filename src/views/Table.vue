@@ -129,6 +129,8 @@
           name: '王五',
           age: 101
         }],
+        // 表头是否可拖动
+        dragable: true,
         // 数据为空显示内容
         emptyText: '暂无数据',
         // 表格高度
@@ -495,6 +497,7 @@
             name: '王五',
             age: 101
           }],
+          dragable: true,
           emptyText: '暂无数据',
           height: 200,
           rowClick: (evt, row) => {
