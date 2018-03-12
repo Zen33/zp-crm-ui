@@ -53,6 +53,9 @@ export default new Router({
     path: '/message',
     component: r => require.ensure([], () => r(require('./views/Message.vue')), 'message')
   }, {
+    path: '/slider',
+    component: r => require.ensure([], () => r(require('./views/Slider.vue')), 'slider')
+  }, {
     path: '/',
     component: r => require.ensure([], () => r(require('./views/Landing.vue')), 'landing')
   }]

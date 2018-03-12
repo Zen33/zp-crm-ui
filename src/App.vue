@@ -35,6 +35,9 @@
                 <router-link to="/switch">开关 Switch</router-link>
               </li>
               <li>
+                <router-link to="/slider">滑块 Slider</router-link>
+              </li>
+              <li>
                 <router-link to="/cascader">级联菜单 Cascader</router-link>
               </li>
               <li>
