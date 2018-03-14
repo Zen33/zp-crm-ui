@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>滑块 Slider</h2>
-    <p>拖动滑块实时更新数据范围。</p>
+    <p>拖动手柄实时更新数据或范围。</p>
     <h3>基础滑块</h3>
     <div class="demo">
       <zp-slider :sliderOption="slOption1" />
@@ -23,7 +23,7 @@
     </div>
     <h3>离散滑块</h3>
     <div class="demo">
-      <zp-slider :sliderOption="slOption2" />
+      <zp-slider :sliderOption="slOption2" class="slider-short"/>
       <div class="figure">
         <pre v-highlight><code class="html">&lt;zp-slider :slOption="slOption2"/&gt;</code></pre>
       </div>
@@ -76,6 +76,40 @@
 }</code></pre>
       </div>
     </div>
+    <h3>垂直滑块</h3>
+    <div class="demo">
+      <zp-slider :sliderOption="slOption4" @slider-action="showVal2"/>
+      <p>
+        <label ref="showLab2">33 - 54</label>
+      </p>
+      <div class="figure">
+        <pre v-highlight><code class="html">&lt;zp-slider :slOption="slOption4" @slider-action="showVal2"/&gt;
+&lt;p&gt;
+  &lt;label ref="showLab2"&gt;33 - 54&lt;/label&gt;
+&lt;/p&gt;</code></pre>
+      </div>
+      <div class="figure">
+        <pre v-highlight><code class="javascript">export default {
+  data () {
+    return {
+      slOption4: {
+        // 当前值
+        value: [33, 54],
+        // 垂直滑块
+        isVertical: true,
+        // 不显示Tip
+        showTooltip: false
+      }
+    }
+  },
+  methods: {
+    showVal2 (val) { // Slider回调，参数为当前值
+      this.$refs.showLab2.textContent = val.join(' - ')
+    }
+  }
+}</code></pre>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -94,13 +128,27 @@
         slOption3: {
           value: [20, 40],
           step: 10
+        },
+        slOption4: {
+          value: [33, 54],
+          isVertical: true,
+          showTooltip: false
         }
       }
     },
     methods: {
       showVal (val) {
         this.$refs.showLab.textContent = val.join(' - ')
+      },
+      showVal2 (val) {
+        this.$refs.showLab2.textContent = val.join(' - ')
       }
     }
   }
 </script>
+
+<style>
+  .slider-short {
+    width: 50%;
+  }
+</style>

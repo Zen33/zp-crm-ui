@@ -35,6 +35,9 @@
                 <router-link to="/switch">开关 Switch</router-link>
               </li>
               <li>
+                <router-link to="/tooltip">文字提示 Tooltip</router-link>
+              </li>
+              <li>
                 <router-link to="/slider">滑块 Slider</router-link>
               </li>
               <li>
@@ -54,6 +57,9 @@
               </li>
               <li>
                 <router-link to="/timeline">时间轴 Timeline</router-link>
+              </li>
+              <li>
+                <router-link to="/draganddrop">拖放 Drag And Drop</router-link>
               </li>
               <li>
                 <router-link to="/watermark">水印 Watermark</router-link>

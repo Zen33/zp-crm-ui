@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>级联菜单 cascader</h2>
+    <h2>级联菜单 Cascader</h2>
     <p>用于定制级联菜单。</p>
     <h3>基础级联菜单显示</h3>
     <div class="demo">
@@ -14,6 +14,7 @@
   data () {
     return {
       casOption1: {
+        width: 200,
         data: [{
           value: 0,
           label: 'TBD',
@@ -77,6 +78,7 @@
       casOption2: {
         // 默认值
         value: [1, 3, 7, 10],
+        width: 300,
         data: [{
           value: 0,
           label: 'TBD',
@@ -140,6 +142,7 @@
       casOption3: {
         // 选择即改变
         immediate: true,
+        width: 300,
         data: [{
           value: 0,
           label: 'TBD',
@@ -262,7 +265,7 @@
     data () {
       return {
         casOption1: {
-          width: 170,
+          width: 200,
           data: [{
             value: 0,
             label: 'TBD',
