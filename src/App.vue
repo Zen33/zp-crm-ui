@@ -59,9 +59,6 @@
                 <router-link to="/timeline">时间轴 Timeline</router-link>
               </li>
               <li>
-                <router-link to="/draganddrop">拖放 Drag And Drop</router-link>
-              </li>
-              <li>
                 <router-link to="/watermark">水印 Watermark</router-link>
               </li>
             </ul>

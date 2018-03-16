@@ -56,9 +56,6 @@ export default new Router({
     path: '/slider',
     component: r => require.ensure([], () => r(require('./views/Slider.vue')), 'slider')
   }, {
-    path: '/draganddrop',
-    component: r => require.ensure([], () => r(require('./views/DragAndDrop.vue')), 'draganddrop')
-  }, {
     path: '/tooltip',
     component: r => require.ensure([], () => r(require('./views/Tooltip.vue')), 'tooltip')
   }, {

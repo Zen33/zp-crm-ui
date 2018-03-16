@@ -4,7 +4,7 @@
     <p>拖动手柄实时更新数据或范围。</p>
     <h3>基础滑块</h3>
     <div class="demo">
-      <zp-slider :sliderOption="slOption1" />
+      <zp-slider :sliderOption="slOption1" class="slider-short"/>
       <div class="figure">
         <pre v-highlight><code class="html">&lt;zp-slider :slOption="slOption1"/&gt;</code></pre>
       </div>
@@ -46,7 +46,7 @@
     </div>
     <h3>范围滑块</h3>
     <div class="demo">
-      <zp-slider :sliderOption="slOption3" @slider-action="showVal"/>
+      <zp-slider :sliderOption="slOption3" @slider-action="showVal" class="slider-short"/>
       <p>
         <label ref="showLab">20 - 40</label>
       </p>
