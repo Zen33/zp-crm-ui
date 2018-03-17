@@ -38,6 +38,9 @@
                 <router-link to="/tooltip">文字提示 Tooltip</router-link>
               </li>
               <li>
+                <router-link to="/popover">气泡信息 Popover</router-link>
+              </li>
+              <li>
                 <router-link to="/slider">滑块 Slider</router-link>
               </li>
               <li>
@@ -71,7 +74,8 @@
 </template>
 
 <style>
-  .zp-btn {
+  .zp-btn,
+  button {
     padding: 7px 9px;
     font-size: 12px;
     border-radius: 4px;
@@ -241,5 +245,13 @@
   .hljs {
     border: 1px solid #ccc;
     border-radius: 5px;
+  }
+  .zp-input,
+  input[type="text"] {
+    height: 20px;
+    line-height: 20px;
+    padding: 3px 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
   }
 </style>

@@ -59,6 +59,9 @@ export default new Router({
     path: '/tooltip',
     component: r => require.ensure([], () => r(require('./views/Tooltip.vue')), 'tooltip')
   }, {
+    path: '/popover',
+    component: r => require.ensure([], () => r(require('./views/Popover.vue')), 'popover')
+  }, {
     path: '/',
     component: r => require.ensure([], () => r(require('./views/Landing.vue')), 'landing')
   }]

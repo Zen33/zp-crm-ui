@@ -90,17 +90,25 @@
         }, {
           title: '操作',
           // 自定义内容（JSX）
-          render: (h, row) => {
+          render (h, row) {
             return h('div', [
-              h('Button', {
-                on: {
-                  click: () => {
-                    this.$alert(row.age)
-                  }
-                },
-                'class': 'zp-btn'
-              }, '年龄'),
-              // 可嵌入ZP UI组件
+              // 可引入ZP UI组件
+              h('zp-tooltip', {
+                props: {
+                  placement: 'right',
+                  content: `${row.name}的年龄为：${row.age}岁`
+                }
+              }, [
+                h('Button', {
+                  on: {
+                    click: () => {
+                      this.$alert(row.age)
+                    }
+                  },
+                  'class': 'zp-btn'
+                }, '年龄')
+              ]),
+              // 可引入ZP UI组件
               h('zp-dropdownlist', {
                 props: {
                   ddlOption: {
@@ -114,7 +122,8 @@
                 }
               })
             ])
-          }
+          },
+          headClass: 'zp-cell-left'
         }],
         data: [{
           date: '1516155885323',
@@ -319,6 +328,8 @@
   data () {
     return {
       tableOption5: {
+        // 表头是否可拖动
+        dragable: true,
         columns: [{
           // 表格头标题
           title: '范围',
@@ -460,14 +471,21 @@
             title: '操作',
             render (h, row) {
               return h('div', [
-                h('Button', {
-                  on: {
-                    click: () => {
-                      this.$alert(row.age)
-                    }
-                  },
-                  'class': 'zp-btn'
-                }, '年龄'),
+                h('zp-tooltip', {
+                  props: {
+                    placement: 'right',
+                    content: `${row.name}的年龄为：${row.age}岁`
+                  }
+                }, [
+                  h('Button', {
+                    on: {
+                      click: () => {
+                        this.$alert(row.age)
+                      }
+                    },
+                    'class': 'zp-btn'
+                  }, '年龄')
+                ]),
                 h('zp-dropdownlist', {
                   props: {
                     ddlOption: {
@@ -627,6 +645,7 @@
           }
         },
         tableOption5: {
+          dragable: true,
           columns: [{
             title: '范围',
             prop: 'scope',

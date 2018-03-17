@@ -50,7 +50,7 @@
         </div>
       </div>
       <div class="figure">
-        <pre v-highlight><code class="html">&lt;zp-tooltip placement="注1" conent="注2"&gt;
+        <pre v-highlight><code class="html">&lt;zp-tooltip placement="注1" content="注2"&gt;
   &lt;button class="zp-btn"&gt;鼠标悬停提示信息&lt;button&gt;
 &lt;/zp-tooltip&gt;
 &lt;!--注1：Tooltip提示位置，共9个，分别为：--&gt;
