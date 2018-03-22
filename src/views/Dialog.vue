@@ -9,7 +9,7 @@
         <div slot="body">这是一个对话框。</div>
       </zp-dialog>
       <div class="figure">
-        <pre v-highlight><code class="html">&lt;button class="zp-btn" @click="dgOption.visible = true"&gt;打开&lt;/button&gt;
+        <pre v-highlight><code class="html">&lt;button class="zp-btn" @click="dgOption1.visible = true"&gt;打开&lt;/button&gt;
 &lt;zp-dialog :dgOption="dgOption1"&gt;
   &lt;div slot="body">这是一个对话框。&lt;/div&gt;
 &lt;/zp-dialog&gt;</code></pre>
@@ -36,11 +36,11 @@
         </div>
       </zp-dialog>
       <div class="figure">
-        <pre v-highlight><code class="html">&lt;button class="zp-btn" @click="dgOption.visible = true"&gt;打开&lt;/button&gt;
-&lt;zp-dialog :dgOption="dgOption1"&gt;
+        <pre v-highlight><code class="html">&lt;button class="zp-btn" @click="dgOption2.visible = true"&gt;打开&lt;/button&gt;
+&lt;zp-dialog :dgOption="dgOption2"&gt;
   &lt;div slot="header">标题&lt;/div&gt;
   &lt;div slot="body">当前窗体宽度为：
-  &lt;zp-dropdownlist :ddlOption="ddlOption" @ddl-action="changeWidth" /&gt;&lt;/div&gt;
+  &lt;zp-dropdownlist :ddlOption="ddlOption2" @ddl-action="changeWidth" /&gt;&lt;/div&gt;
 &lt;/zp-dialog&gt;</code></pre>
       </div>
       <div class="figure">

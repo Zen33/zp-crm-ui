@@ -28,11 +28,11 @@
     <h3>渐变色环形进度显示</h3>
     <div class="demo">
       <zp-circle-progress :cpOption="cpOption2">
-        <div slot="cpInfo">当前：60%</div>
+        <div>当前：60%</div>
       </zp-circle-progress>
       <div class="figure">
         <pre v-highlight><code class="html">&lt;zp-circle-progress :cpOption="cpOption2" &gt;
-  &lt;div slot="cpInfo"&gt;当前：60%&lt;/div&gt;
+  &lt;div&gt;当前：60%&lt;/div&gt;
 &lt;/zp-circle-progress&gt;</code></pre>
       </div>
       <div class="figure">
@@ -58,18 +58,18 @@
     <div class="demo">
       <div class="flex">
         <zp-circle-progress :cpOption="cpOption3" @cp-action="changeProgress">
-          <div slot="cpInfo">{{ `${cpOption3.percentage}%` }}</div>
+          <div>{{ `${cpOption3.percentage}%` }}</div>
         </zp-circle-progress>
         <zp-circle-progress :cpOption="cpOption4">
-          <div slot="cpInfo">{{ `${cpOption4.percentage}%` }}</div>
+          <div>{{ `${cpOption4.percentage}%` }}</div>
         </zp-circle-progress>
       </div>
       <div class="figure">
         <pre v-highlight><code class="html">&lt;zp-circle-progress :cpOption="cpOption3" @cp-action="changeProgress"&gt;
-  &lt;div slot="cpInfo"&gt;{ {cpOption3.percentage} }&lt;/div&gt;
+  &lt;div&gt;{ {cpOption3.percentage} }&lt;/div&gt;
 &lt;/zp-circle-progress&gt;
 &lt;zp-circle-progress :cpOption="cpOption4"&gt;
-  &lt;div slot="cpInfo"&gt;{ {cpOption4.percentage} }&lt;/div&gt;
+  &lt;div&gt;{ {cpOption4.percentage} }&lt;/div&gt;
 &lt;/zp-circle-progress&gt;</code></pre>
       </div>
       <div class="figure">

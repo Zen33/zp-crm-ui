@@ -15,14 +15,14 @@
     <div class="demo">
       <zp-popover ref="pop2" placement="right" trigger="hover" width="150">
         <zp-circle-progress :cpOption="cpOption">
-          <div slot="cpInfo">当前：60%</div>
+          <div>当前：60%</div>
         </zp-circle-progress>
       </zp-popover>
       <input class="zp-input" type="text" v-popover:pop2 />
       <div class="figure">
         <pre v-highlight><code class="html">&lt;zp-popover ref="pop2" placement="right" trigger="hover" width="150"&gt;
   &lt;zp-circle-progress :cpOption="cpOption"&gt;
-    &lt;div slot="cpInfo"&gt;当前：60%&lt;/div&gt;
+    &lt;div&gt;当前：60%&lt;/div&gt;
   &lt;/zp-circle-progress&gt;
 &lt;/zp-popover&gt;
 &lt;input class="zp-input" type="text" v-popover:pop2 /&gt;

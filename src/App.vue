@@ -6,74 +6,101 @@
         <div class="nav">
         </div>
       </div>
-      <div class="sidebar-outer">
-        <div class="sidebar">
-          <div class="sidebar-inner">
-            <ul class="sidebar-menu">
-              <li>
-                <router-link to="/experience">经验值 Experience</router-link>
-              </li>
-              <li>
-                <router-link to="/circleprogress">环形进度 Circle Progress</router-link>
-              </li>
-              <li>
-                <router-link to="/animatenumber">动态数字 Animate Number</router-link>
-              </li>
-              <li>
-                <router-link to="/dropdownlist">下拉菜单 Dropdownlist</router-link>
-              </li>
-              <li>
-                <router-link to="/collapse">折叠面板 Collapse</router-link>
-              </li>
-              <li>
-                <router-link to="/radio">单选框 Radio</router-link>
-              </li>
-              <li>
-                <router-link to="/checkbox">复选框 Checkbox</router-link>
-              </li>
-              <li>
-                <router-link to="/switch">开关 Switch</router-link>
-              </li>
-              <li>
-                <router-link to="/tooltip">文字提示 Tooltip</router-link>
-              </li>
-              <li>
-                <router-link to="/popover">气泡信息 Popover</router-link>
-              </li>
-              <li>
-                <router-link to="/slider">滑块 Slider</router-link>
-              </li>
-              <li>
-                <router-link to="/cascader">级联菜单 Cascader</router-link>
-              </li>
-              <li>
-                <router-link to="/table">表格 Table</router-link>
-              </li>
-              <li>
-                <router-link to="/pagination">分页 Pagination</router-link>
-              </li>
-              <li>
-                <router-link to="/dialog">对话框 Dialog</router-link>
-              </li>
-              <li>
-                <router-link to="/message">消息对话框 Message</router-link>
-              </li>
-              <li>
-                <router-link to="/timeline">时间轴 Timeline</router-link>
-              </li>
-              <li>
-                <router-link to="/watermark">水印 Watermark</router-link>
-              </li>
-            </ul>
+      <zp-scroller class="sidebar-scroller">
+        <div class="sidebar-outer">
+          <div class="sidebar">
+            <div class="sidebar-inner">
+              <ul class="sidebar-menu">
+                <li>
+                  <router-link to="/experience">经验值 Experience</router-link>
+                </li>
+                <li>
+                  <router-link to="/circleprogress">环形进度 Circle Progress</router-link>
+                </li>
+                <li>
+                  <router-link to="/animatenumber">动态数字 Animate Number</router-link>
+                </li>
+                <li>
+                  <router-link to="/dropdownlist">下拉菜单 Dropdownlist</router-link>
+                </li>
+                <li>
+                  <router-link to="/collapse">折叠面板 Collapse</router-link>
+                </li>
+                <li>
+                  <router-link to="/radio">单选框 Radio</router-link>
+                </li>
+                <li>
+                  <router-link to="/checkbox">复选框 Checkbox</router-link>
+                </li>
+                <li>
+                  <router-link to="/switch">开关 Switch</router-link>
+                </li>
+                <li>
+                  <router-link to="/tooltip">文字提示 Tooltip</router-link>
+                </li>
+                <li>
+                  <router-link to="/popover">气泡信息 Popover</router-link>
+                </li>
+                <li>
+                  <router-link to="/slider">滑块 Slider</router-link>
+                </li>
+                <li>
+                  <router-link to="/cascader">级联菜单 Cascader</router-link>
+                </li>
+                <li>
+                  <router-link to="/table">表格 Table</router-link>
+                </li>
+                <li>
+                  <router-link to="/pagination">分页 Pagination</router-link>
+                </li>
+                <li>
+                  <router-link to="/dialog">对话框 Dialog</router-link>
+                </li>
+                <li>
+                  <router-link to="/message">消息对话框 Message</router-link>
+                </li>
+                <li>
+                  <router-link to="/scroller">滚动条 Scroller</router-link>
+                </li>
+                <li>
+                  <router-link to="/timeline">时间轴 Timeline</router-link>
+                </li>
+                <li>
+                  <router-link to="/watermark">水印 Watermark</router-link>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </div>
+       </div>
+      </zp-scroller>
     </div>
-    <router-view class="content"></router-view>
+    <zp-scroller class="content-scroller">
+      <router-view class="content"></router-view>
+    </zp-scroller>
   </div>
 </template>
 
 <style>
+  html,
+  body {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+  }
+  .sidebar-scroller {
+    position: fixed;
+    margin-top: 80px;
+    width: 200px;
+    height: -webkit-calc(100vh - 80px);
+    height: -moz-calc(100vh - 80px);
+    height: calc(100vh - 80px);
+  }
+  .content-scroller {
+    position: relative;
+    margin-left: 200px;
+    height: 100vh;
+    z-index: 0;
+  }
   .zp-btn,
   button {
     padding: 7px 9px;
@@ -124,7 +151,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    z-index: 2;
+    z-index: 0;
     background: #fff;
     top: 0;
     right: 0;
@@ -139,13 +166,13 @@
     flex: .4;
     font-size: 12px;
   }
-  .sidebar-outer {
+  /* .sidebar-outer {
     position: fixed;
     top: 80px;
     bottom: 0;
     left: 0;
     width: 200px;
-  }
+  } */
   .sidebar-menu {
     margin: 0;
     margin-bottom: 20px;
@@ -158,7 +185,8 @@
     font-size: 12px;
     text-decoration: none;
     display: block;
-    padding: 10px 15px;
+    line-height: 30px;
+    text-indent: 20px;
     border-bottom: none;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -169,12 +197,16 @@
     color: #333;
     font-weight: 600;
   }
-  .content {
+  /* .content {
     position: absolute;
     top: 80px;
     right: 0;
     bottom: 0;
     left: 200px;
+  } */
+  .content {
+    margin-top: 15px;
+    margin-right: 30px;
   }
   h2 {
     font-weight: 400;
@@ -248,9 +280,9 @@
   }
   .zp-input,
   input[type="text"] {
-    height: 20px;
-    line-height: 20px;
-    padding: 3px 5px;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }

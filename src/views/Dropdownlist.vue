@@ -5,11 +5,11 @@
     <h3>基础下拉菜单显示</h3>
     <div class="demo">
       <zp-dropdownlist :ddl-option="ddlOption1">
-        <a slot="ddlSelf" href="javascript:;">点击我</a>
+        <a href="javascript:;">点击我</a>
       </zp-dropdownlist>
       <div class="figure">
         <pre v-highlight><code class="html">&lt;zp-dropdownlist :ddl-option="ddlOption1"&gt;
-  &lt;a slot="ddlSelf" href="javascript:;"&gt;点击我&lt;/a&gt;
+  &lt;a href="javascript:;"&gt;点击我&lt;/a&gt;
 &lt;/zp-dropdownlist&gt;</code></pre>
       </div>
       <div class="figure">
@@ -35,16 +35,15 @@
     <h3>无限子菜单显示</h3>
     <div class="demo">
       <zp-dropdownlist :ddl-option="ddlOption2">
-        <a slot="ddlSelf" href="javascript:;">点击我</a>
+        <a href="javascript:;">点击我</a>
       </zp-dropdownlist>
       <div class="figure">
         <pre v-highlight><code class="html">&lt;zp-dropdownlist :ddl-option="ddlOption2"&gt;
-  &lt;a slot="ddlSelf" href="javascript:;"&gt;点击我&lt;/a&gt;
+  &lt;a href="javascript:;"&gt;点击我&lt;/a&gt;
 &lt;/zp-dropdownlist&gt;</code></pre>
       </div>
       <div class="figure">
-        <pre v-highlight>
-          <code class="javascript">export default {
+        <pre v-highlight><code class="javascript">export default {
   data () {
     return {
       ddlOption2: {
@@ -95,8 +94,7 @@
       }
     }
   }
-}</code>
-        </pre>
+}</code></pre>
       </div>
     </div>
     <h3>纯数字下拉菜单</h3>

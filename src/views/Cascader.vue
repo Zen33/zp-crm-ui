@@ -9,8 +9,7 @@
         <pre v-highlight><code class="html">&lt;zp-cascader :cas-option="casOption1" /&gt;</code></pre>
       </div>
       <div class="figure">
-        <pre v-highlight>
-          <code class="javascript">export default {
+        <pre v-highlight><code class="javascript">export default {
   data () {
     return {
       casOption1: {

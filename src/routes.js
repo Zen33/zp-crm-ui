@@ -62,6 +62,9 @@ export default new Router({
     path: '/popover',
     component: r => require.ensure([], () => r(require('./views/Popover.vue')), 'popover')
   }, {
+    path: '/scroller',
+    component: r => require.ensure([], () => r(require('./views/Scroller.vue')), 'scroller')
+  }, {
     path: '/',
     component: r => require.ensure([], () => r(require('./views/Landing.vue')), 'landing')
   }]
