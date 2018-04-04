@@ -25,15 +25,15 @@ module.exports = {
   module: {
     rules: [{
       test: /\.vue$/,
-      loader: 'vue-loader',
-      options: {
-        loaders: {}
-        // other vue-loader options go here
-      }
+      loader: 'vue-loader'
     }, {
       test: /\.js$/,
       loader: 'babel-loader',
-      exclude: /node_modules/
+      // exclude: /(node_modules|bower_components)/
+      include: [
+        path.resolve(__dirname, 'node_modules/zp-crm-ui'),
+        path.resolve(__dirname, 'src')
+      ]
     }, {
       // test: /\.(png|jpg|gif|svg)$/,
       test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
@@ -42,12 +42,7 @@ module.exports = {
       options: {
         name: '[name].[ext]?[hash]'
       }
-    },
-      // {
-      //   test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
-      //   loader: 'file-loader'
-      // },
-    {
+    }, {
       test: /\.css$/,
       loader: 'style-loader!css-loader'
     }]
@@ -74,14 +69,6 @@ if (env === 'production') {
   // module.exports.devtool = '#source-map'
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
-    // new webpack.DefinePlugin({
-    //   'process.env': {
-    //     NODE_ENV: 'production'
-    //   }
-    // }),
-    // new webpack.optimize.CommonsChunkPlugin({
-    //   names: ['vendor', 'manifest'],
-    // }),
     new HtmlWebpackPlugin({
       filename: path.resolve(__dirname, './build/index.html'),
       template: 'output.html',
