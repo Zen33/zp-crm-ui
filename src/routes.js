@@ -65,6 +65,9 @@ export default new Router({
     path: '/scroller',
     component: r => require.ensure([], () => r(require('./views/Scroller.vue')), 'scroller')
   }, {
+    path: '/sparkline',
+    component: r => require.ensure([], () => r(require('./views/Sparkline.vue')), 'sparkline')
+  }, {
     path: '/',
     component: r => require.ensure([], () => r(require('./views/Landing.vue')), 'landing')
   }]

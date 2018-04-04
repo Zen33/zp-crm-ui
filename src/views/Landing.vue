@@ -21,7 +21,8 @@
   },
   "dependencies": {
     "vue": "^2.2.1",
-    "zp-crm-ui": "^0.1.29"
+    "zp-crm-ui": "^0.1.42",
+    "vue-sparklines": "^0.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
@@ -118,9 +119,11 @@ if (process.env.NODE_ENV === 'production') {
       <pre v-highlight><code class="javascript"> // 完整引入
 import Vue from 'vue'
 import ZpUI from 'zp-crm-ui'
+import Sparkline from 'vue-sparklines'
 import App from './App.vue'
 
 Vue.use(ZpUI)
+Vue.use(Sparkline)
 
 new Vue({
   el: '#app',

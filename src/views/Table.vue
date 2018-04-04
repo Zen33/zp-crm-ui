@@ -91,6 +91,7 @@
           title: '操作',
           // 自定义内容（JSX）
           render (h, row) {
+            const data = [19, 20, 101, 7]
             return h('div', [
               // 可引入ZP UI组件
               h('zp-tooltip', {
@@ -112,13 +113,39 @@
               h('zp-dropdownlist', {
                 props: {
                   ddlOption: {
-                    data: [10, 50, 100],
+                    data,
                     width: 60,
-                    setDefault: 10
+                    setDefault: data[data.indexOf(row.age)]
                   }
                 },
                 style: {
                   marginLeft: '20px'
+                }
+              }),
+              // 其他定制组件
+              h('sparkline', {
+                attrs: {
+                  width: 100,
+                  height: 25
+                },
+                props: {
+                  data,
+                  children: ['curve'],
+                  limit: 3,
+                  spotlight: data.indexOf(row.age),
+                  curveStyles: {
+                    strokeWidth: 2,
+                    stroke: '#54a5ff',
+                    fill: '#54a5ff'
+                  },
+                  spotStyles: {
+                    fill: '#54a5ff'
+                  },
+                  refLineStyles: {
+                    stroke: '#d14',
+                    strokeOpacity: 1,
+                    strokeDasharray: '5, 5'
+                  }
                 }
               })
             ])
@@ -137,6 +164,10 @@
           date: '1516155885323',
           name: '王五',
           age: 101
+        }, {
+          date: '1516155885323',
+          name: '小胡子',
+          age: 7
         }],
         // 表头是否可拖动
         dragable: true,
@@ -470,6 +501,7 @@
           }, {
             title: '操作',
             render (h, row) {
+              const data = [19, 20, 101, 7]
               return h('div', [
                 h('zp-tooltip', {
                   props: {
@@ -489,13 +521,38 @@
                 h('zp-dropdownlist', {
                   props: {
                     ddlOption: {
-                      data: [10, 50, 100],
+                      data,
                       width: 60,
-                      setDefault: 10
+                      setDefault: data[data.indexOf(row.age)]
                     }
                   },
                   style: {
                     marginLeft: '20px'
+                  }
+                }),
+                h('sparkline', {
+                  attrs: {
+                    width: 100,
+                    height: 25
+                  },
+                  props: {
+                    data,
+                    children: ['curve'],
+                    limit: data.length,
+                    spotlight: data.indexOf(row.age),
+                    curveStyles: {
+                      strokeWidth: 2,
+                      stroke: '#54a5ff',
+                      fill: '#54a5ff'
+                    },
+                    spotStyles: {
+                      fill: '#54a5ff'
+                    },
+                    refLineStyles: {
+                      stroke: '#d14',
+                      strokeOpacity: 1,
+                      strokeDasharray: '5, 5'
+                    }
                   }
                 })
               ])
@@ -514,6 +571,10 @@
             date: '1516155885323',
             name: '王五',
             age: 101
+          }, {
+            date: '1516155885323',
+            name: '小胡子',
+            age: 7
           }],
           dragable: true,
           emptyText: '暂无数据',
@@ -747,5 +808,10 @@
   }
   .zp-table-row .zp-ddl input {
     height: 25px;
+  }
+  .zp-table-row .sparkline-wrap {
+    display: inline-block;
+    position: absolute;
+    margin-left: 20px;
   }
 </style>

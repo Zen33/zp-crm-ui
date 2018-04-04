@@ -12,6 +12,9 @@
             <div class="sidebar-inner">
               <ul class="sidebar-menu">
                 <li>
+                  <router-link to="/sparkline">迷你图 Sparkline</router-link>
+                </li>
+                <li>
                   <router-link to="/experience">经验值 Experience</router-link>
                 </li>
                 <li>

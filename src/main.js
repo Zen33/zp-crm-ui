@@ -4,6 +4,7 @@ import ZpUI from 'zp-crm-ui'
 import App from './App.vue'
 import router from './routes'
 import Highlight from './views/highlight'
+import Sparkline from 'vue-sparklines'
 
 Vue.config.debug = true
 
@@ -15,6 +16,7 @@ Vue.use(ZpUI)
 // Vue.use(CircleProgress)
 
 Vue.use(Highlight)
+Vue.use(Sparkline)
 
 router.afterEach(() => {
   window.scrollTo(0, 0)
