@@ -1,17 +1,17 @@
 {
   "data": {
     "result": [{
-      "key": 0,
-      "value": "Aquaman"
+      "value": 0,
+      "label": "Aquaman"
     }, {
-      "key": 1,
-      "value": "Arisia Rrab"
+      "value": 1,
+      "label": "Arisia Rrab"
     }, {
-      "key": 2,
-      "value": "Batman"
+      "value": 2,
+      "label": "Batman"
     }, {
-      "key": 3,
-      "value": "Doctor Fate"
+      "value": 3,
+      "label": "Doctor Fate"
     }]
   }
 }
