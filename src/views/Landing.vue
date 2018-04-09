@@ -22,7 +22,7 @@
   "dependencies": {
     "vue": "^2.2.1",
     "zp-crm-ui": "^0.1.42",
-    "vue-sparklines": "^0.1.0"
+    "vue-sparklines": "^0.1.2"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
@@ -133,10 +133,12 @@ new Vue({
 // 部分引入
 import Vue from 'vue'
 import { Collapse, Dropdownlist} from 'zp-crm-ui'
+import Sparkline from 'vue-sparklines'
 import App from './App.vue'
 
 Vue.use(Collapse)
 Vue.use(Dropdownlist)
+Vue.use(Sparkline)
 
 new Vue({
   el: '#app',

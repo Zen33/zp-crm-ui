@@ -127,27 +127,29 @@
                 attrs: {
                   width: 100,
                   height: 25
-                },
-                props: {
-                  data,
-                  children: ['curve'],
-                  limit: 3,
-                  spotlight: data.indexOf(row.age),
-                  curveStyles: {
-                    strokeWidth: 2,
-                    stroke: '#54a5ff',
-                    fill: '#54a5ff'
-                  },
-                  spotStyles: {
-                    fill: '#54a5ff'
-                  },
-                  refLineStyles: {
-                    stroke: '#d14',
-                    strokeOpacity: 1,
-                    strokeDasharray: '5, 5'
-                  }
                 }
-              })
+              }, [
+                h('sparklineCurve', {
+                  attrs: {
+                    data,
+                    limit: data.length,
+                    spotlight: data.indexOf(row.age),
+                    styles: {
+                      strokeWidth: 2,
+                      stroke: '#54a5ff',
+                      fill: '#54a5ff'
+                    },
+                    spotStyles: {
+                      fill: '#54a5ff'
+                    },
+                    refLineStyles: {
+                      stroke: '#d14',
+                      strokeOpacity: 1,
+                      strokeDasharray: '5, 5'
+                    }
+                  }
+                })
+              ])
             ])
           },
           headClass: 'zp-cell-left'
@@ -534,27 +536,29 @@
                   attrs: {
                     width: 100,
                     height: 25
-                  },
-                  props: {
-                    data,
-                    children: ['curve'],
-                    limit: data.length,
-                    spotlight: data.indexOf(row.age),
-                    curveStyles: {
-                      strokeWidth: 2,
-                      stroke: '#54a5ff',
-                      fill: '#54a5ff'
-                    },
-                    spotStyles: {
-                      fill: '#54a5ff'
-                    },
-                    refLineStyles: {
-                      stroke: '#d14',
-                      strokeOpacity: 1,
-                      strokeDasharray: '5, 5'
-                    }
                   }
-                })
+                }, [
+                  h('sparklineCurve', {
+                    attrs: {
+                      data,
+                      limit: data.length,
+                      spotlight: data.indexOf(row.age),
+                      styles: {
+                        strokeWidth: 2,
+                        stroke: '#54a5ff',
+                        fill: '#54a5ff'
+                      },
+                      spotStyles: {
+                        fill: '#54a5ff'
+                      },
+                      refLineStyles: {
+                        stroke: '#d14',
+                        strokeOpacity: 1,
+                        strokeDasharray: '5, 5'
+                      }
+                    }
+                  })
+                ])
               ])
             },
             headClass: 'zp-cell-left'
