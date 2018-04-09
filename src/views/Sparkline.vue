@@ -62,7 +62,7 @@
 }</code></pre>
       </div>
     </div>
-    <h3>定制图表</h3>
+    <h3>定制视图</h3>
     <div class="demo sparkline-with-text">
       <sparkline width="200" height="50">
         <sparklineCurve :data="spData3" :limit="spData3.length" :spotlight="spIndex3" :styles="spCurveStyles3" :spotStyles="spSpotStyles3" :refLineStyles="spRefLineStyles3" :textStyles="spTextStyles3" />
@@ -194,10 +194,12 @@
     <div class="demo">
       <sparkline width="200" height="50">
         <sparklineLine :data="spData7" :hasSpot="spHasSpot7" :limit="20" :styles="spLineStyles7" />
+        <sparklineBar :data="spData8" :limit="20" :styles="spBarStyles8" />
       </sparkline>
       <div class="figure">
         <pre v-highlight><code class="html">&lt;sparkline width="200" height="50"&gt;
   &lt;sparklineLine :data="spData7" :hasSpot="spHasSpot7" :limit="20" :styles="spLineStyles7" /&gt;
+  &lt;sparklineBar :data="spData8" :limit="20" :styles="spBarStyles8" /&gt;
 &lt;/sparkline&gt;</code></pre>
       </div>
       <div class="figure">
@@ -214,6 +216,16 @@
       spLineStyles7: {
         stroke: '#54a5ff',
         strokeWidth: 2
+      },
+      spData8: (() => {
+        const len = 20
+        return Array.from({
+          length: len
+        }, () => Math.floor(Math.random() * len))
+      })(),
+      spBarStyles8: {
+        fill: '#d14',
+        fillOpacity: 0.3
       }
     }
   },
@@ -225,7 +237,8 @@
   },
   created () {
     setInterval(() => {
-      this.spData7 = this.spData7.concat([this.rndData()])
+      this.spData7.push(this.rndData())
+      this.spData8.push(this.rndData())
     }, 100)
   }
 }</code></pre>
@@ -335,6 +348,16 @@
         spLineStyles7: {
           stroke: '#54a5ff',
           strokeWidth: 2
+        },
+        spData8: (() => {
+          const len = 20
+          return Array.from({
+            length: len
+          }, () => Math.floor(Math.random() * len))
+        })(),
+        spBarStyles8: {
+          fill: '#d14',
+          fillOpacity: 0.3
         }
       }
     },
@@ -346,7 +369,8 @@
     },
     created () {
       setInterval(() => {
-        this.spData7 = this.spData7.concat([this.rndData()])
+        this.spData7.push(this.rndData())
+        this.spData8.push(this.rndData())
       }, 100)
     }
   }
