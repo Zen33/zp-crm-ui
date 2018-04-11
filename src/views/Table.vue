@@ -89,7 +89,7 @@
           width: 100
         }, {
           title: '操作',
-          // 自定义内容（JSX）
+          // 自定义内容
           render (h, row) {
             const data = [19, 20, 101, 7]
             return h('div', [
@@ -294,7 +294,7 @@
             itemClass: 'item-center',
             // 当前为折叠项目，有且仅有一个
             expandProp: true,
-            // 自定义内容（JSX）
+            // 自定义内容
             render (h, row) {
               let honerClass
               if (row.honer === '优') {
@@ -335,7 +335,7 @@
           }],
           // 折叠类型：expand/tree
           expand: 'expand',
-          // 折叠项自定义内容（JSX）
+          // 折叠项自定义内容
           expandRender (h, row) {
             return h('div', [
               h('div', {
