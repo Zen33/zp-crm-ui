@@ -32,6 +32,7 @@ module.exports = {
       // exclude: /(node_modules|bower_components)/
       include: [
         path.resolve(__dirname, 'node_modules/zp-crm-ui'),
+        path.resolve(__dirname, 'node_modules/vue-sparklines'),
         path.resolve(__dirname, 'src')
       ]
     }, {

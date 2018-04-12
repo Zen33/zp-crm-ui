@@ -280,14 +280,13 @@
     </div>
     <h3>饼状图</h3>
     <div class="demo">
-      <sparkline>
+      <sparkline width="30">
         <sparklinePie :data="spData9" />
-        <sparklinePie :data="spData10" />
       </sparkline>
       <div class="figure">
-        <pre v-highlight><code class="html">&lt;sparkline&gt;
+        <pre v-highlight><code class="html">&lt;sparkline width="30"&gt;
+  &lt;!-- 同一视图区有且只有一个饼状图 --&gt;
   &lt;sparklineBar :data="spData9" /&gt;
-  &lt;sparklineBar :data="spData10" /&gt;
 &lt;/sparkline&gt;</code></pre>
       </div>
       <div class="figure">
@@ -295,8 +294,7 @@
   data () {
     return {
       // 饼状图数据跟以上图形有区别，数据包含数据值及颜色值，例如[{value: 1, color: '#000'}...]
-      spData9: this.rndData2(),
-      spData10: this.rndData2(1)
+      spData9: this.rndData2()
     }
   },
   methods: {
@@ -310,6 +308,11 @@
         }
       })
     }
+  },
+  created () {
+    setInterval(() => {
+      this.spData9 = this.rndData2()
+    }, 5000)
   }
 }</code></pre>
       </div>
@@ -444,7 +447,7 @@
           fillOpacity: 0.3
         },
         spData9: this.rndData2(),
-        spData10: this.rndData2(1)
+        spData10: this.rndData2()
       }
     },
     methods: {
@@ -454,7 +457,7 @@
       },
       rndData2 (len = 20) {
         return Array.from({
-          length: len % 2 === 0 ? 1 : 3
+          length: len % 2 === 0 ? 3 : 1
         }, () => {
           return {
             value: Math.floor(Math.random() * (len + 5)),
@@ -467,8 +470,10 @@
       setInterval(() => {
         this.spData7.push(this.rndData())
         this.spData8.push(this.rndData())
-        // this.spData10 = this.rndData2()
       }, 100)
+      setInterval(() => {
+        this.spData9 = this.rndData2()
+      }, 5000)
     }
   }
 </script>

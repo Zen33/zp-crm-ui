@@ -13,7 +13,7 @@
   "dependencies": {
     "vue": "^2.2.1",
     "vue-router": "^2.3.0",
-    "vue-sparklines": "^0.1.3",
+    "vue-sparklines": "^0.1.4",
     "zp-crm-ui": "^0.1.42"
   },
   "devDependencies": {
