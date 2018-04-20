@@ -3,8 +3,7 @@
     <div>
       <div class="header">
         <router-link to="/" class="zp-logo"></router-link>
-        <div class="nav">
-        </div>
+        <div class="nav"></div>
       </div>
       <zp-scroller class="sidebar-scroller">
         <div class="sidebar-outer">

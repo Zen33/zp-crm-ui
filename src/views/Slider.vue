@@ -110,6 +110,26 @@
 }</code></pre>
       </div>
     </div>
+    <h3>固定滑块</h3>
+    <div class="demo">
+      <zp-slider :sliderOption="slOption5" class="slider-short"/>
+      <div class="figure">
+        <pre v-highlight><code class="html">&lt;zp-slider :slOption="slOption5" class="slider-short"/&gt;</code></pre>
+      </div>
+      <div class="figure">
+        <pre v-highlight><code class="javascript">export default {
+  data () {
+    return {
+      slOption5: {
+        value: [20, 40],
+        // 固定滑块
+        fixed: true
+      }
+    }
+  }
+}</code></pre>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -133,6 +153,11 @@
           value: [33, 54],
           isVertical: true,
           showTooltip: false
+        },
+        slOption5: {
+          // step: 10,
+          value: [20, 40],
+          fixed: true
         }
       }
     },
