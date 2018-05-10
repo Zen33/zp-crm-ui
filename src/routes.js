@@ -71,6 +71,9 @@ export default new Router({
     path: '/dialogbox',
     component: r => require.ensure([], () => r(require('./views/DialogBox.vue')), 'dialogbox')
   }, {
+    path: '/information',
+    component: r => require.ensure([], () => r(require('./views/Information.vue')), 'information')
+  }, {
     path: '/',
     component: r => require.ensure([], () => r(require('./views/Landing.vue')), 'landing')
   }]

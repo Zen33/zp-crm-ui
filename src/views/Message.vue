@@ -20,28 +20,38 @@
     </div>
     <h3>定制提示</h3>
     <div class="demo">
-      <button class="zp-btn" @click="openMsg">提示</button>
+      <button class="zp-btn" @click="openMsgTop">置顶</button>
+      <button class="zp-btn" @click="openMsgBottom">置底</button>
       <div class="figure">
-        <pre v-highlight><code class="html">&lt;button class="zp-btn" @click="openMsg"&gt;提示&lt;/button&gt;</code></pre>
+        <pre v-highlight><code class="html">&lt;button class="zp-btn" @click="openMsgTop"&gt;置顶&lt;/button&gt;
+&lt;button class="zp-btn" @click="openMsgBottom"&gt;置底&lt;/button&gt;</code></pre>
       </div>
       <div class="figure">
         <pre v-highlight><code class="javascript">export default {
   methods: {
-    openMsg () {
-      this.$message('一个错误提示', {
+    openMsgTop () {
+      this.$message('一个1s错误提示', {
         type: 'error',
         duration: 1000,
-        showClose: true
+        showClose: true,
+        position: 'top'
       }).then(() => {
-        this.$message('一个警告提示', {
+        this.$message('一个2s警告提示', {
           type: 'warning',
-          duration: 2000
+          duration: 2000,
+          position: 'top'
         }).then(() => {
-          this.$message('一个成功提示', {
+          this.$message('一个3s成功提示', {
             type: 'success',
-            duration: 3000
+            duration: 3000,
+            position: 'top'
           })
         })
+      })
+    },
+    openMsgBottom () {
+      this.$message('一个底部的提示', {
+        position: 'bottom'
       })
     }
   }
@@ -57,21 +67,29 @@
       openInfo () {
         this.$message('这是一个提示')
       },
-      openMsg () {
+      openMsgTop () {
         this.$message('一个1s错误提示', {
           type: 'error',
           duration: 1000,
-          showClose: true
+          showClose: true,
+          position: 'top'
         }).then(() => {
           this.$message('一个2s警告提示', {
             type: 'warning',
-            duration: 2000
+            duration: 2000,
+            position: 'top'
           }).then(() => {
             this.$message('一个3s成功提示', {
               type: 'success',
-              duration: 3000
+              duration: 3000,
+              position: 'top'
             })
           })
+        })
+      },
+      openMsgBottom () {
+        this.$message('一个底部的提示', {
+          position: 'bottom'
         })
       }
     }

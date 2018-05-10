@@ -65,6 +65,9 @@
                   <router-link to="/message">轻提示 Message</router-link>
                 </li>
                 <li>
+                  <router-link to="/information">通知 Information</router-link>
+                </li>
+                <li>
                   <router-link to="/scroller">滚动条 Scroller</router-link>
                 </li>
                 <li>
