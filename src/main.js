@@ -20,6 +20,9 @@ Vue.use(Sparkline)
 
 router.afterEach(() => {
   window.scrollTo(0, 0)
+  setTimeout(() => {
+    document.querySelector('.content-scroller .zp-scroller-wrap').scrollTo(0, 0)
+  }, 0)
 })
 
 /* eslint-disable no-new */

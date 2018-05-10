@@ -59,7 +59,10 @@
                   <router-link to="/dialog">对话框 Dialog</router-link>
                 </li>
                 <li>
-                  <router-link to="/message">消息对话框 Message</router-link>
+                  <router-link to="/dialogbox">消息对话框 Dialog Box</router-link>
+                </li>
+                <li>
+                  <router-link to="/message">轻提示 Message</router-link>
                 </li>
                 <li>
                   <router-link to="/scroller">滚动条 Scroller</router-link>

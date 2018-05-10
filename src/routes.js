@@ -68,6 +68,9 @@ export default new Router({
     path: '/sparkline',
     component: r => require.ensure([], () => r(require('./views/Sparkline.vue')), 'sparkline')
   }, {
+    path: '/dialogbox',
+    component: r => require.ensure([], () => r(require('./views/DialogBox.vue')), 'dialogbox')
+  }, {
     path: '/',
     component: r => require.ensure([], () => r(require('./views/Landing.vue')), 'landing')
   }]
