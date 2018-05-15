@@ -2,7 +2,7 @@
   <div>
     <h2>通知 Information</h2>
     <p>基于命令行驱动的悬浮提醒信息。</p>
-    <h3>基础提示</h3>
+    <h3>基础通知</h3>
     <div class="demo">
       <button class="zp-btn" @click="openInfo">可自动关闭的通知</button>
       <button class="zp-btn" @click="openInfo2">不自动关闭的通知</button>
@@ -25,7 +25,7 @@
 }</code></pre>
       </div>
     </div>
-    <h3>定制提示</h3>
+    <h3>定制通知</h3>
     <div class="demo">
       <button class="zp-btn" @click="openInfo3">通知</button>
       <div class="figure">
@@ -46,7 +46,7 @@
           duration: 2000,
           position: 'bottom-right'
         }).then(() => {
-          this.$info('一个3s左下角成功的提示', {
+          this.$info('一个3s左下角成功的通知', {
             type: 'success',
             duration: 3000,
             position: 'bottom-left'
@@ -89,7 +89,7 @@
             duration: 2000,
             position: 'bottom-right'
           }).then(() => {
-            this.$info('一个3s左下角成功的提示', {
+            this.$info('一个3s左下角成功的通知', {
               type: 'success',
               duration: 3000,
               position: 'bottom-left'

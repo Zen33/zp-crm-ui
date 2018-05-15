@@ -68,6 +68,9 @@
                   <router-link to="/information">通知 Information</router-link>
                 </li>
                 <li>
+                  <router-link to="/carousel">轮播 Carousel</router-link>
+                </li>
+                <li>
                   <router-link to="/scroller">滚动条 Scroller</router-link>
                 </li>
                 <li>
