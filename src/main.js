@@ -1,6 +1,34 @@
 import Vue from 'vue'
 import ZpUI from 'zp-crm-ui'
-// import { Collapse, Dropdownlist, Experience, AnimateNumber, CircleProgress } from 'zp-crm-ui'
+// import {
+//   Collapse,
+//   Dropdownlist,
+//   Experience,
+//   AnimateNumber,
+//   CircleProgress,
+//   Table,
+//   Pagination,
+//   Timeline,
+//   Checkbox,
+//   CheckboxGroup,
+//   Radio,
+//   RadioGroup,
+//   Switch,
+//   Cascader,
+//   Dialog,
+//   Slider,
+//   Tooltip,
+//   Popover,
+//   Scroller,
+//   Carousel,
+//   CarouselItem,
+//   Breadcrumb,
+//   Watermark,
+//   WatermarkDirective,
+//   Message,
+//   DialogBox,
+//   Information
+// } from 'zp-crm-ui'
 import App from './App.vue'
 import router from './routes'
 import Highlight from './views/highlight'
@@ -14,6 +42,30 @@ Vue.use(ZpUI)
 // Vue.use(Experience)
 // Vue.use(AnimateNumber)
 // Vue.use(CircleProgress)
+// Vue.use(Table)
+// Vue.use(Pagination)
+// Vue.use(Timeline)
+// Vue.use(Checkbox)
+// Vue.use(CheckboxGroup)
+// Vue.use(Radio)
+// Vue.use(RadioGroup)
+// Vue.use(Switch)
+// Vue.use(Cascader)
+// Vue.use(Dialog)
+// Vue.use(Slider)
+// Vue.use(Tooltip)
+// Vue.use(Popover)
+// Vue.use(Scroller)
+// Vue.use(Carousel)
+// Vue.use(CarouselItem)
+// Vue.use(Breadcrumb)
+
+// Vue.directive(Watermark.name, WatermarkDirective)
+
+// Vue.prototype.$alert = DialogBox.alert
+// Vue.prototype.$confirm = DialogBox.confirm
+// Vue.prototype.$message = Message
+// Vue.prototype.$info = Information
 
 Vue.use(Highlight)
 Vue.use(Sparkline)
