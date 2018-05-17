@@ -77,6 +77,9 @@ export default new Router({
     path: '/carousel',
     component: r => require.ensure([], () => r(require('./views/Carousel.vue')), 'carousel')
   }, {
+    path: '/breadcrumb',
+    component: r => require.ensure([], () => r(require('./views/Breadcrumb.vue')), 'breadcrumb')
+  }, {
     path: '/',
     component: r => require.ensure([], () => r(require('./views/Landing.vue')), 'landing')
   }]
