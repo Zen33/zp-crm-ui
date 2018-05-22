@@ -71,9 +71,10 @@ Vue.use(Highlight)
 Vue.use(Sparkline)
 
 router.afterEach(() => {
-  window.scrollTo(0, 0)
+  // window.scrollTo(0, 0)
   setTimeout(() => {
-    document.querySelector('.content-scroller .zp-scroller-wrap').scrollTop = 0
+    const selector = '.content-scroller .zp-scroller-wrap'
+    document.querySelector(selector) && (document.querySelector(selector).scrollTop = 0)
   }, 0)
 })
 
