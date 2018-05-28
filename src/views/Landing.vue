@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "vue": "^2.2.1",
-    "zp-crm-ui": "^0.1.49",
+    "zp-crm-ui": "^0.1.50",
     "vue-sparklines": "^0.1.4"
   },
   "devDependencies": {
