@@ -17,10 +17,10 @@
                   <router-link to="/experience">经验值 Experience</router-link>
                 </li>
                 <li>
-                  <router-link to="/circleprogress">环形进度 Circle Progress</router-link>
+                  <router-link to="/progress">进度条 Progress</router-link>
                 </li>
                 <li>
-                  <router-link to="/animatenumber">动态数字 Animate Number</router-link>
+                  <router-link to="/dynamicnumbers">动态数字 Dynamic Numbers</router-link>
                 </li>
                 <li>
                   <router-link to="/dropdownlist">下拉菜单 Dropdownlist</router-link>
@@ -72,6 +72,9 @@
                 </li>
                 <li>
                   <router-link to="/scroller">滚动条 Scroller</router-link>
+                </li>
+                <li>
+                  <router-link to="/upload">上传 Upload</router-link>
                 </li>
                 <li>
                   <router-link to="/timeline">时间轴 Timeline</router-link>

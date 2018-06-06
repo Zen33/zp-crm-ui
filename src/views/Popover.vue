@@ -14,20 +14,34 @@
     <h3>定制气泡信息</h3>
     <div class="demo">
       <zp-popover ref="pop2" placement="right" trigger="hover" width="150">
-        <zp-circle-progress :cpOption="cpOption">
+        <zp-progress :proOption="proOption">
           <div>当前：60%</div>
-        </zp-circle-progress>
+        </zp-progress>
       </zp-popover>
       <input class="zp-input" type="text" v-popover:pop2 />
       <div class="figure">
         <pre v-highlight><code class="html">&lt;zp-popover ref="pop2" placement="right" trigger="hover" width="150"&gt;
-  &lt;zp-circle-progress :cpOption="cpOption"&gt;
+  &lt;zp-progress :proOption="proOption"&gt;
     &lt;div&gt;当前：60%&lt;/div&gt;
-  &lt;/zp-circle-progress&gt;
+  &lt;/zp-progress&gt;
 &lt;/zp-popover&gt;
 &lt;input class="zp-input" type="text" v-popover:pop2 /&gt;
 &lt;!--placement：Popover提示位置，共9个，分别为：--&gt;
 &lt;!--top/top-start/top-end/bottom/bottom-start/bottom-end/left/left-start/left-end/right/right-start/right-end--&gt;</code></pre>
+      </div>
+      <div class="figure">
+        <pre v-highlight><code class="javascript">export default {
+  data () {
+    return {
+      proOption: {
+        type: 'circle',
+        percentage: 60,
+        startColor: '#ff8400',
+        endColor: '#ff8400'
+      }
+    }
+  }
+}</code></pre>
       </div>
     </div>
   </div>
@@ -37,7 +51,8 @@
   export default {
     data () {
       return {
-        cpOption: {
+        proOption: {
+          type: 'circle',
           percentage: 60,
           startColor: '#ff8400',
           endColor: '#ff8400'

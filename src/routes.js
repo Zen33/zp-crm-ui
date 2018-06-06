@@ -17,11 +17,11 @@ export default new Router({
     path: '/experience',
     component: r => require.ensure([], () => r(require('./views/Experience.vue')), 'experience')
   }, {
-    path: '/circleprogress',
-    component: r => require.ensure([], () => r(require('./views/CircleProgress.vue')), 'circleprogress')
+    path: '/progress',
+    component: r => require.ensure([], () => r(require('./views/Progress.vue')), 'progress')
   }, {
-    path: '/animatenumber',
-    component: r => require.ensure([], () => r(require('./views/AnimateNumber.vue')), 'animatenumber')
+    path: '/dynamicnumbers',
+    component: r => require.ensure([], () => r(require('./views/DynamicNumbers.vue')), 'dynamicnumbers')
   }, {
     path: '/table',
     component: r => require.ensure([], () => r(require('./views/Table.vue')), 'table')
@@ -79,6 +79,9 @@ export default new Router({
   }, {
     path: '/breadcrumb',
     component: r => require.ensure([], () => r(require('./views/Breadcrumb.vue')), 'breadcrumb')
+  }, {
+    path: '/upload',
+    component: r => require.ensure([], () => r(require('./views/Upload.vue')), 'upload')
   }, {
     path: '/',
     component: r => require.ensure([], () => r(require('./views/Landing.vue')), 'landing')
