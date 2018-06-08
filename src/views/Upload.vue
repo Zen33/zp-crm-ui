@@ -4,47 +4,47 @@
     <p>用以点击或拖拽上传文件。</p>
     <h3>点击上传</h3>
     <div class="demo">
-      <zp-upload url="https://jsonplaceholder.typicode.com/posts" :before-upload="beforeUpload" :progress="handleProgress" :error="handleError" :success="handleSuccess" :exceed="handleExceed" :maxSize="1000">
+      <zp-upload url="https://jsonplaceholder.typicode.com/posts" :before-upload="beforeUpload1" :progress="handleProgress1" :error="handleError" :success="handleSuccess" :exceed="handleExceed" :maxSize="1024" ref="uploader1">
         <button ref="uploadBtn">点击上传</button>
       </zp-upload>
-      <zp-progress :proOption="proOption" v-show="visible === true" class="progress-short" />
+      <div v-for="(file, index) in fileList">
+        {{ file.name }}<zp-progress :proOption="file" class="progress-short" ref="progress"/>
+      </div>
       <div class="figure">
         <pre v-highlight><code class="html">&lt;zp-upload
   url="https://jsonplaceholder.typicode.com/posts"
-  :before-upload="beforeUpload"
-  :progress="handleProgress"
+  :before-upload="beforeUpload1"
+  :progress="handleProgress1"
   :error="handleError"
   :success="handleSuccess"
   :exceed="handleExceed"
-  :maxSize="1000" &gt;
+  :maxSize="1024"
+  ref="uploader1"&gt;
   &lt;button ref="uploadBtn"&gt;点击上传&lt;/button&gt;
 &lt;/zp-upload&gt;
-&lt;zp-progress :proOption="proOption" v-show="visible === true" /&gt;</code></pre>
+&lt;div v-for="(file, index) in fileList"&gt;
+  { { file.name } }&lt;zp-progress :proOption="file" ref="progress"/&gt;
+&lt;/div&gt;</code></pre>
       </div>
       <div class="figure">
         <pre v-highlight><code class="javascript">export default {
   data () {
     return {
-      proOption: {
-        percentage: 0
-      },
-      visible: false
+      fileList: []
     }
   },
   methods: {
     // 上传前事件
-    beforeUpload () {
-      this.visible = true
+    beforeUpload1 () {
       this.$refs.uploadBtn.disabled = true
+      this.fileList = this.$refs.uploader1.curList
     },
     // 上传中事件
-    handleProgress (evt) {
-      this.proOption.percentage = evt.percentComplete
-      if (evt.percentComplete === 100) {
-        setTimeout(() => {
-          this.visible = false
-          this.proOption.percentage = 0
-        }, 600)
+    handleProgress1 (evt, file) {
+      for (let [index, item] of this.fileList.entries()) {
+        if (item.uid === file.uid) {
+          return (this.$refs.progress[index].percentage = evt.percentComplete)
+        }
       }
     },
     // 上传失败事件
@@ -62,7 +62,6 @@
     },
     // 超上限事件
     handleExceed (file) {
-      this.visible = false
       this.$message(`${file.name}文件超过上限！`, {
         type: 'warning',
         position: 'top'
@@ -74,27 +73,27 @@
     </div>
     <h3>拖拽或点击上传</h3>
     <div class="demo">
-      <zp-upload url="https://jsonplaceholder.typicode.com/posts" :before-upload="beforeUpload2" :progress="handleProgress" :error="handleError" :success="handleSuccess" draggable :multiple="multiple" ref="uploader" class="upload-drag">
+      <zp-upload url="https://jsonplaceholder.typicode.com/posts" :before-upload="beforeUpload2" :progress="handleProgress2" :error="handleError" :success="handleSuccess" draggable :multiple="multiple" ref="uploader2" class="upload-drag">
         <div class="upload-drop"></div>
       </zp-upload>
       <div v-if="file">
-        当前预上传的文件: {{ file.name }} <button @click="handleContinue">点击继续</button>
+        当前预上传的文件: {{ file.name }} <button @click="handleContinue">继续</button>&nbsp;<button @click="handleCancel">取消</button>
       </div>
       <zp-progress :proOption="proOption" v-show="visible === true" class="progress-short" />
       <div class="figure">
         <pre v-highlight><code class="html">&lt;zp-upload
   url="https://jsonplaceholder.typicode.com/posts"
   :before-upload="beforeUpload2"
-  :progress="handleProgress"
+  :progress="handleProgress2"
   :error="handleError"
   :success="handleSuccess"
   draggable
   :multiple="multiple"
-   ref="uploader" &gt;
-  &lt;div&gt;&lt;/button&gt;
+  ref="uploader2"&gt;
+  &lt;div&gt;&lt;/div&gt;
 &lt;/zp-upload&gt;
 &lt;div v-if="file"&gt;
-  当前预上传的文件: { { file.name } } &lt;button @click="handleContinue"&gt;点击继续&lt;/button&gt;
+  当前预上传的文件: { { file.name } } &lt;button @click="handleContinue"&gt;继续&lt;/button&gt;&nbsp;&lt;button @click="handleCancel"&gt;取消&lt;/button&gt;
 &lt;/div&gt;
 &lt;zp-progress :proOption="proOption" v-show="visible === true" /&gt;</code></pre>
       </div>
@@ -116,7 +115,7 @@
       this.file = file
       return false
     },
-    handleProgress (evt) {
+    handleProgress2 (evt) {
       this.proOption.percentage = evt.percentComplete
       if (evt.percentComplete === 100) {
         setTimeout(() => {
@@ -129,17 +128,22 @@
       this.$message(`${file.name}上传失败！`, {
         type: 'error',
         position: 'top'
-      }).then(this.$refs.uploadBtn.disabled = false)
+      })
     },
     handleSuccess (ignore, file) {
       this.$message(`${file.name}上传成功！`, {
         position: 'top'
-      }).then(this.$refs.uploadBtn.disabled = false)
+      })
     },
     handleContinue () {
-      this.$refs.uploader.postFile(this.file)
+      this.$refs.uploader2.send(this.file)
       this.file = null
       this.visible = true
+    },
+    handleCancel () {
+      this.$refs.uploader2.abort(this.file)
+      this.file = null
+      this.visible = false
     }
   }
 }</code></pre>
@@ -155,6 +159,7 @@
         proOption: {
           percentage: 0
         },
+        fileList: [],
         visible: false,
         draggable: true,
         file: null,
@@ -162,15 +167,22 @@
       }
     },
     methods: {
-      beforeUpload () {
-        this.visible = true
+      beforeUpload1 () {
         this.$refs.uploadBtn.disabled = true
+        this.fileList = this.$refs.uploader1.curList
       },
       beforeUpload2 (file) {
         this.file = file
         return false
       },
-      handleProgress (evt) {
+      handleProgress1 (evt, file) {
+        for (let [index, item] of this.fileList.entries()) {
+          if (item.uid === file.uid) {
+            return (this.$refs.progress[index].percentage = evt.percentComplete)
+          }
+        }
+      },
+      handleProgress2 (evt) {
         this.proOption.percentage = evt.percentComplete
         if (evt.percentComplete === 100) {
           setTimeout(() => {
@@ -198,9 +210,14 @@
         }).then(this.$refs.uploadBtn.disabled = false)
       },
       handleContinue () {
-        this.$refs.uploader.postFile(this.file)
+        this.$refs.uploader2.send(this.file)
         this.file = null
         this.visible = true
+      },
+      handleCancel () {
+        this.$refs.uploader2.abort(this.file)
+        this.file = null
+        this.visible = false
       }
     }
   }
