@@ -83,6 +83,9 @@ export default new Router({
     path: '/upload',
     component: r => require.ensure([], () => r(require('./views/Upload.vue')), 'upload')
   }, {
+    path: '/sheet',
+    component: r => require.ensure([], () => r(require('./views/Sheet.vue')), 'sheet')
+  }, {
     path: '/',
     component: r => require.ensure([], () => r(require('./views/Landing.vue')), 'landing')
   }]

@@ -83,6 +83,9 @@
                   <router-link to="/breadcrumb">面包屑 Breadcrumb</router-link>
                 </li>
                 <li>
+                  <router-link to="/sheet">悬浮层 Sheet</router-link>
+                </li>
+                <li>
                   <router-link to="/watermark">水印 Watermark</router-link>
                 </li>
               </ul>
