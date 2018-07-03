@@ -14,7 +14,7 @@
     "vue": "^2.2.1",
     "vue-router": "^2.3.0",
     "vue-sparklines": "^0.1.6",
-    "zp-crm-ui": "^0.1.54"
+    "zp-crm-ui": "^0.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
@@ -27,6 +27,7 @@
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-stage-2": "^6.24.1",
     "babel-runtime": "^6.26.0",
+    "clean-webpack-plugin": "^0.1.19",
     "cross-env": "^3.2.3",
     "css-loader": "^0.26.2",
     "file-loader": "^0.10.1",

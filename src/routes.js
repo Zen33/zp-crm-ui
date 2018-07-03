@@ -86,6 +86,9 @@ export default new Router({
     path: '/sheet',
     component: r => require.ensure([], () => r(require('./views/Sheet.vue')), 'sheet')
   }, {
+    path: '/rate',
+    component: r => require.ensure([], () => r(require('./views/Rate.vue')), 'rate')
+  }, {
     path: '/',
     component: r => require.ensure([], () => r(require('./views/Landing.vue')), 'landing')
   }]

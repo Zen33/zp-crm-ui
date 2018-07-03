@@ -2,6 +2,7 @@ var path = require('path')
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var UglifyJsPlugin = require('uglifyes-webpack-plugin')
+var CleanWebpackPlugin = require('clean-webpack-plugin')
 var env = process.env.NODE_ENV
 
 module.exports = {
@@ -114,6 +115,8 @@ if (env === 'production') {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'manifest',
       chunks: ['vendor']
-    })
+    }),
+    // remove/clean your build folder(s) before building
+    new CleanWebpackPlugin(['build/dist'])
   ])
 }

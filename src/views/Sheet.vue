@@ -21,7 +21,7 @@
       <button @click="showSheet('left')">左侧</button>
       <div class="figure">
         <pre v-highlight><code class="html">&lt;zp-sheet :visible.sync="注1" placement="注2"&gt;
-  &lt;div"&gt;内容&lt;div&gt;
+  &lt;div&gt;内容&lt;div&gt;
 &lt;/zp-sheet&gt;
 &lt;!--注1：Sheet当前状态。--&gt;
 &lt;!--注2：Sheet提示位置，共4个，分别为：--&gt;
