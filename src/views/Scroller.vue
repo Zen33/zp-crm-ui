@@ -71,7 +71,7 @@
 </script>
 
 <style>
-.scroller-content {
+.demo .scroller-content {
   font-size: 14px;
   line-height: 30px;
   padding: 0 20px 20px 10px;
