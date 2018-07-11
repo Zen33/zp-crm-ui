@@ -89,6 +89,9 @@
                   <router-link to="/sheet">悬浮层 Sheet</router-link>
                 </li>
                 <li>
+                  <router-link to="/steps">步骤条 Steps</router-link>
+                </li>
+                <li>
                   <router-link to="/loader">加载 Loader</router-link>
                 </li>
                 <li>

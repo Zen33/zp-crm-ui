@@ -14,7 +14,7 @@
     "vue": "^2.2.1",
     "vue-router": "^2.3.0",
     "vue-sparklines": "^0.1.6",
-    "zp-crm-ui": "^0.2.1"
+    "zp-crm-ui": "^0.2.2"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",

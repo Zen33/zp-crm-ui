@@ -55,7 +55,7 @@
     </div>
     <h3>定制评分二</h3>
     <div class="demo icon-face">
-      <zp-rate show-text empty-icon-class="zp-rate-face-empty" :icon-classes="['zp-rate-face-unhappy', 'zp-rate-face-smile', 'zp-rate-face-happy', 'zp-rate-face-shocked']" v-model="rate4" />
+      <zp-rate show-text empty-icon-class="zp-rate-face-empty" :icon-classes="['zp-rate-face-unhappy', 'zp-rate-face-smile', 'zp-rate-face-happy', 'zp-rate-face-shocked']" v-model="rate4" style="height: 30px;" />
       <div class="figure">
         <pre v-highlight><code class="html">&lt;zp-rate show-text empty-icon-class="zp-rate-face-empty" :icon-classes="['zp-rate-face-unhappy', 'zp-rate-face-smile', 'zp-rate-face-happy', 'zp-rate-face-shocked']" v-model="rate4" /&gt;</code></pre>
       </div>
