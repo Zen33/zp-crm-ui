@@ -95,6 +95,18 @@ export default new Router({
     path: '/steps',
     component: r => require.ensure([], () => r(require('./views/Steps.vue')), 'steps')
   }, {
+    path: '/card',
+    component: r => require.ensure([], () => r(require('./views/Card.vue')), 'card')
+  }, {
+    path: '/tree',
+    component: r => require.ensure([], () => r(require('./views/Tree.vue')), 'tree')
+  }, {
+    path: '/tabs',
+    component: r => require.ensure([], () => r(require('./views/Tabs.vue')), 'tabs')
+  }, {
+    path: '/tag',
+    component: r => require.ensure([], () => r(require('./views/Tag.vue')), 'tag')
+  }, {
     path: '/',
     component: r => require.ensure([], () => r(require('./views/Landing.vue')), 'landing')
   }]

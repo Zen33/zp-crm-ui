@@ -5,13 +5,13 @@
     <h3>基础轮播</h3>
     <div class="demo">
       <zp-carousel>
-        <zp-carousel-item v-for="item in 2">
+        <zp-carousel-item v-for="(item, i) in 2" :key="i">
           {{ item }}
         </zp-carousel-item>
       </zp-carousel>
       <div class="figure">
         <pre v-highlight><code class="html">&lt;zp-carousel&gt;
-  &lt;zp-carousel-item v-for="item in 2"&gt;
+  &lt;zp-carousel-item v-for="(item, i) in 2" :key="i"&gt;
     { { item } }
   &lt;/zp-carousel-item&gt;
 &lt;/zp-carousel&gt;</code></pre>
@@ -20,13 +20,13 @@
     <h3>定制轮播</h3>
     <div class="demo">
       <zp-carousel height="233px" :hasArrow="hasArrow" interval="5000" :autoplay="autoplay" @cal-action="change" style="width: 500px" ref="carousel">
-        <zp-carousel-item v-for="item in items" :label="item.name">
+        <zp-carousel-item v-for="(item, i) in items" :label="item.name" :key="i">
           {{ item.value }}
         </zp-carousel-item>
       </zp-carousel>
       <br />
-      <button class="btn" @click="toPrev">向前切换</button>
-      <button class="btn" @click="toNext">向后切换</button>
+      <button @click="toPrev">向前切换</button>
+      <button @click="toNext">向后切换</button>
       <div class="figure">
         <pre v-highlight><code class="html">&lt;zp-carousel
   height="233px"
@@ -36,13 +36,13 @@
   @cal-action="change"
   style="width: 500px"
   ref="carousel"&gt;
-  &lt;zp-carousel-item v-for="item in items" :label="item.name"&gt;
+  &lt;zp-carousel-item v-for="(item, i) in items" :label="item.name" :key="i"&gt;
     { { item.value } }
   &lt;/zp-carousel-item&gt;
 &lt;/zp-carousel&gt;
 &lt;br /&gt;
-&lt;button class="btn" @click="toPrev"&gt;向前切换&lt;/button&gt;
-&lt;button class="btn" @click="toNext"&gt;向后切换&lt;/button&gt;</code></pre>
+&lt;button @click="toPrev"&gt;向前切换&lt;/button&gt;
+&lt;button @click="toNext"&gt;向后切换&lt;/button&gt;</code></pre>
       </div>
       <div class="figure">
         <pre v-highlight><code class="javascript">export default {

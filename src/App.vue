@@ -29,6 +29,9 @@
                   <router-link to="/collapse">折叠面板 Collapse</router-link>
                 </li>
                 <li>
+                  <router-link to="/tag">标签 Tag</router-link>
+                </li>
+                <li>
                   <router-link to="/radio">单选框 Radio</router-link>
                 </li>
                 <li>
@@ -51,6 +54,9 @@
                 </li>
                 <li>
                   <router-link to="/table">表格 Table</router-link>
+                </li>
+                <li>
+                  <router-link to="/tree">树控件 Tree</router-link>
                 </li>
                 <li>
                   <router-link to="/pagination">分页 Pagination</router-link>
@@ -86,7 +92,13 @@
                   <router-link to="/rate">评分 Rate</router-link>
                 </li>
                 <li>
+                  <router-link to="/card">卡片 Card</router-link>
+                </li>
+                <li>
                   <router-link to="/sheet">悬浮层 Sheet</router-link>
+                </li>
+                <li>
+                  <router-link to="/tabs">标签页 Tabs</router-link>
                 </li>
                 <li>
                   <router-link to="/steps">步骤条 Steps</router-link>
@@ -103,11 +115,34 @@
        </div>
       </zp-scroller>
     </div>
-    <zp-scroller class="content-scroller">
+    <zp-scroller class="content-scroller" @on-scroll="handleScroll" ref="scroller">
       <router-view class="content"></router-view>
     </zp-scroller>
+    <transition name="back-top">
+      <div class="back-to-top" v-show="backToTop" @click="backTop">
+        <i class="caret-top"></i>
+      </div>
+    </transition>
   </div>
 </template>
+
+<script>
+  export default {
+    data () {
+      return {
+        backToTop: false
+      }
+    },
+    methods: {
+      backTop () {
+        this.$refs.scroller.$refs.scrollerWrap.scrollTop = 0
+      },
+      handleScroll (evt) {
+        this.backToTop = !!(evt.target.scrollTop > 200)
+      }
+    }
+  }
+</script>
 
 <style>
   html,
@@ -314,5 +349,41 @@
     padding: 0 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
+  }
+  .back-to-top {
+    background-color: #fff;
+    position: fixed;
+    right: 108px;
+    bottom: 150px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    -webkit-transition: .3s;
+    transition: .3s;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .2);
+    text-align: center;
+    line-height: 35px;
+  }
+  .back-to-top .caret-top {
+    display: inline-block;
+    width: 14px;
+    height: 8px;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAICAYAAADJEc7MAAAAAXNSR0IArs4c6QAAAKBJREFUGBmFkFEOwiAQRIFLNB4HDuRP/VD/tdhUbTwQcBtvAc40bGI1DSSbZXbetICOMfZKqZ219oDeXOAnQG9TSulQfUrp3kqRIcvMwoYQRlRBPbbC9Cozrhh87UYDR3muDAjO6JH59RYNwNfwLABmc515mbHrb8E9wAF3OBpjXtQ5573W2uPxTtSy/oI08IcrmoCDc+4sgWbHfS6sLfADvGRlngSVsjQAAAAASUVORK5CYII=') no-repeat;
+    cursor: pointer;
+    -moz-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+  .back-top-enter,
+  .back-top-leave-active {
+    -ms-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+    opacity: 0;
   }
 </style>

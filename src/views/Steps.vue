@@ -50,7 +50,7 @@
       step: 1,
       // 当前步骤信息位置：right/bottom
       position: 'right',
-      // 已完成不收颜色
+      // 已完成步骤颜色
       ftColor: '#fe8964',
       // 未完成步骤颜色
       bgColor: '#9fc9fe'
