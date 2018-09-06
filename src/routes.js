@@ -107,6 +107,9 @@ export default new Router({
     path: '/tag',
     component: r => require.ensure([], () => r(require('./views/Tag.vue')), 'tag')
   }, {
+    path: '/datepicker',
+    component: r => require.ensure([], () => r(require('./views/DatePicker.vue')), 'datepicker')
+  }, {
     path: '/',
     component: r => require.ensure([], () => r(require('./views/Landing.vue')), 'landing')
   }]

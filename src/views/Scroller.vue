@@ -74,11 +74,18 @@
 .demo .scroller-content {
   font-size: 14px;
   line-height: 30px;
-  padding: 0 20px 20px 10px;
+  /* padding: 0 20px 20px 10px; */
   width: 500px;
   height: 200px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  height: 200px;
+}
+.demo .scroller-content .zp-scroller-content {
+  padding: 0 30px 0 10px;
+}
+.demo .scroller-content p {
+  margin: 5px;
 }
 .zp-dg-container .zp-dg-body {
   overflow: hidden;

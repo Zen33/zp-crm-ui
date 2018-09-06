@@ -29,18 +29,25 @@
     <h3>定制对话框</h3>
     <div class="demo">
       <button class="zp-btn" @click="dgOption2.visible = true">打开</button>
-      <zp-dialog :dgOption="dgOption2">
+      <zp-dialog :dgOption="dgOption2" ref="dialog">
         <div slot="header">标题</div>
         <div slot="body">当前窗体宽度为：
           <zp-dropdownlist :ddlOption="ddlOption" @ddl-action="changeWidth" />
         </div>
+        <div slot="footer">
+          <button @click="closeDialog">自动关闭 {{ countDown }} 秒...</button>
+        </div>
       </zp-dialog>
       <div class="figure">
         <pre v-highlight><code class="html">&lt;button class="zp-btn" @click="dgOption2.visible = true"&gt;打开&lt;/button&gt;
-&lt;zp-dialog :dgOption="dgOption2"&gt;
+&lt;zp-dialog :dgOption="dgOption2" ref="dialog"&gt;
   &lt;div slot="header">标题&lt;/div&gt;
   &lt;div slot="body">当前窗体宽度为：
-  &lt;zp-dropdownlist :ddlOption="ddlOption2" @ddl-action="changeWidth" /&gt;&lt;/div&gt;
+    &lt;zp-dropdownlist :ddlOption="ddlOption2" @ddl-action="changeWidth" /&gt;
+  &lt;/div&gt;
+  &lt;div slot="footer"&gt;
+    &lt;button @click="closeDialog"&gt;自动关闭 { { countDown } } 秒...&lt;/button&gt;
+  &lt;/div&gt;
 &lt;/zp-dialog&gt;</code></pre>
       </div>
       <div class="figure">
@@ -61,12 +68,33 @@
         data: ['800像素', '500像素', '1000像素'],
         width: 100,
         setDefault: '500像素'
-      }
+      },
+      countDown: 0
     }
   },
   methods: {
     changeWidth (val) {
       this.dgOption2.width = parseInt(val, 10)
+    },
+    // 关闭dialog
+    closeDialog () {
+      this.$refs.dialog.closeDialog()
+    }
+  },
+  watch: {
+    'dgOption2.visible' (val) {
+      val && (this.countDown = 20)
+    },
+    countDown (val) {
+      if (val === 20) {
+        const process = setInterval(() => {
+          this.countDown--
+          if (!this.countDown) {
+            clearInterval(process)
+            this.closeDialog()
+          }
+        }, 1000)
+      }
     }
   }
 }</code></pre>
@@ -92,12 +120,32 @@
           data: ['800像素', '500像素', '1000像素'],
           width: 100,
           setDefault: '500像素'
-        }
+        },
+        countDown: 0
       }
     },
     methods: {
       changeWidth (val) {
         this.dgOption2.width = parseInt(val, 10)
+      },
+      closeDialog () {
+        this.$refs.dialog.closeDialog()
+      }
+    },
+    watch: {
+      'dgOption2.visible' (val) {
+        val && (this.countDown = 20)
+      },
+      countDown (val) {
+        if (val === 20) {
+          const process = setInterval(() => {
+            this.countDown--
+            if (!this.countDown) {
+              clearInterval(process)
+              this.closeDialog()
+            }
+          }, 1000)
+        }
       }
     }
   }

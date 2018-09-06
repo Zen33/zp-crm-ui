@@ -70,6 +70,8 @@ Vue.use(ZpUI)
 Vue.use(Highlight)
 Vue.use(Sparkline)
 
+Vue.config.lang = 'en'
+
 router.afterEach(() => {
   // window.scrollTo(0, 0)
   setTimeout(() => {

@@ -13,6 +13,12 @@
                 <li>
                   <router-link to="/sparkline">迷你图 Sparkline</router-link>
                 </li>
+                <!-- <li>
+                  <router-link to="/layout">布局 Layout</router-link>
+                </li>
+                <li>
+                  <router-link to="/icon">图标 Icon</router-link>
+                </li>  -->
                 <li>
                   <router-link to="/experience">经验值 Experience</router-link>
                 </li>
@@ -45,6 +51,9 @@
                 </li>
                 <li>
                   <router-link to="/popover">气泡信息 Popover</router-link>
+                </li>
+                <li>
+                  <router-link to="/datepicker">日期选择器 Date Picker</router-link>
                 </li>
                 <li>
                   <router-link to="/slider">滑块 Slider</router-link>

@@ -119,7 +119,7 @@
   methods: {
     // 定制回调事件
     onSelectItem (val) {
-      this.$alert(val, '选择项')
+      this.$alert(val)
     }
   }
 }</code></pre>
@@ -304,8 +304,8 @@
           url: './ddl.json',
           dotNotation: 'data.result',
           zIndex: 1,
-          onSelect (val) {
-            this.$alert(val, '选择项')
+          onSelect (val, label) {
+            this.$alert(label)
           }
         }
       }
