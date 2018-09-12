@@ -91,7 +91,9 @@
           this.countDown--
           if (!this.countDown) {
             clearInterval(process)
-            this.closeDialog()
+            try {
+              this.closeDialog()
+            } catch (e) {}
           }
         }, 1000)
       }
@@ -142,7 +144,9 @@
             this.countDown--
             if (!this.countDown) {
               clearInterval(process)
-              this.closeDialog()
+              try {
+                this.closeDialog()
+              } catch (e) {}
             }
           }, 1000)
         }

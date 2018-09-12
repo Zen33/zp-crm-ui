@@ -56,6 +56,9 @@
                   <router-link to="/datepicker">日期选择器 Date Picker</router-link>
                 </li>
                 <li>
+                  <router-link to="/timepicker">时间选择器 Time Picker</router-link>
+                </li>
+                <li>
                   <router-link to="/slider">滑块 Slider</router-link>
                 </li>
                 <li>

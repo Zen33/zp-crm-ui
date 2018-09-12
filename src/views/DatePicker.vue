@@ -100,7 +100,7 @@
       }
     },
     created () {
-      const date = new Date();
+      const date = new Date()
       date.setDate(date.getDate() + 7)
       this.date5 = [new Date(), new Date(date)]
     }

@@ -110,6 +110,9 @@ export default new Router({
     path: '/datepicker',
     component: r => require.ensure([], () => r(require('./views/DatePicker.vue')), 'datepicker')
   }, {
+    path: '/timepicker',
+    component: r => require.ensure([], () => r(require('./views/TimePicker.vue')), 'timespicker')
+  }, {
     path: '/',
     component: r => require.ensure([], () => r(require('./views/Landing.vue')), 'landing')
   }]
