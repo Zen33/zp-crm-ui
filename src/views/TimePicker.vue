@@ -4,9 +4,9 @@
     <p>用以完成时间的选择。</p>
     <h3>基础时间选择器</h3>
     <div class="demo">
-      <zp-time-picker v-model="time1" />
+      <zp-time-picker v-model="time1" placeholder="选择时间" />
       <div class="figure">
-        <pre v-highlight><code class="html">&lt;zp-time-picker v-model="time1" /&gt;</code></pre>
+        <pre v-highlight><code class="html">&lt;zp-time-picker v-model="time1" placeholder="选择时间" /&gt;</code></pre>
       </div>
       <div class="figure">
         <pre v-highlight><code class="javascript">export default {
@@ -36,10 +36,11 @@
     </div>
     <h3>定制时间选择器</h3>
     <div class="demo">
-      <zp-time-picker v-model="time3" :disabledHours="disHour" :disabledMinutes="disMin" :disabledSeconds="disSec" type="nonsecond" format="HH:mm A" am-pm-mode="A" />
+      <zp-time-picker v-model="time3" placeholder="选择时间" :disabledHours="disHour" :disabledMinutes="disMin" type="nonsecond" format="HH:mm A" am-pm-mode="A" />
       <div class="figure">
         <pre v-highlight><code class="html">&lt;zp-time-picker
   v-model="time3"
+  placeholder="选择时间"
   :disabledHours="disHour"
   :disabledMinutes="disMin"
   type="nonsecond"

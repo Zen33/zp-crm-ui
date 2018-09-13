@@ -53,10 +53,13 @@
                   <router-link to="/popover">气泡信息 Popover</router-link>
                 </li>
                 <li>
-                  <router-link to="/datepicker">日期选择器 Date Picker</router-link>
+                  <router-link to="/datepicker">日期选择 Date Picker</router-link>
                 </li>
                 <li>
-                  <router-link to="/timepicker">时间选择器 Time Picker</router-link>
+                  <router-link to="/timepicker">时间选择 Time Picker</router-link>
+                </li>
+                <li>
+                  <router-link to="/datetimepicker">日期时间选择 Date Time Picker</router-link>
                 </li>
                 <li>
                   <router-link to="/slider">滑块 Slider</router-link>

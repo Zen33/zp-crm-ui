@@ -22,7 +22,7 @@
   "dependencies": {
     "vue": "^2.2.1",
     "vue-sparklines": "^0.1.7",
-    "zp-crm-ui": "^0.3.8"
+    "zp-crm-ui": "^0.3.9"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
