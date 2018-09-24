@@ -104,6 +104,12 @@
                   <router-link to="/breadcrumb">面包屑 Breadcrumb</router-link>
                 </li>
                 <li>
+                  <router-link to="/sensor">感应器 Sensor</router-link>
+                </li>
+                <li>
+                  <router-link to="/picker">选择器 Picker</router-link>
+                </li>
+                <li>
                   <router-link to="/rate">评分 Rate</router-link>
                 </li>
                 <li>
@@ -308,7 +314,7 @@
     font-size: 12px;
   }
   pre {
-    background: #f0f0f0;
+    background: #f7f7f7;
     margin: 0;
     display: block;
     font-family: monospace;
@@ -341,23 +347,29 @@
   .figure {
     position: relative;
     margin-top: 10px;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
   }
   p {
     font-size: 14px;
   }
   /* highlight style */
-  .hljs{display:block;overflow-x:auto;padding:0.5em;background:#eee;color:black}.hljs-link,.hljs-emphasis,.hljs-attribute,.hljs-addition{color:#070}.hljs-emphasis{font-style:italic}.hljs-strong,.hljs-string,.hljs-deletion{color:#d14}.hljs-strong{font-weight:bold}.hljs-quote,.hljs-comment{color:#998;font-style:italic}.hljs-section,.hljs-title{color:#900}.hljs-class .hljs-title,.hljs-type{color:#458}.hljs-variable,.hljs-template-variable{color:#336699}.hljs-bullet{color:#997700}.hljs-meta{color:#3344bb}.hljs-code,.hljs-number,.hljs-literal,.hljs-keyword,.hljs-selector-tag{color:#099}.hljs-regexp{background-color:#fff0ff;color:#880088}.hljs-symbol{color:#990073}.hljs-tag,.hljs-name,.hljs-selector-id,.hljs-selector-class{color:#007700}
+  /* .hljs-attribute,.hljs-doctag,.hljs-keyword,.hljs-meta-keyword,.hljs-name,.hljs-selector-tag,.hljs-strong{font-weight:700}.hljs{display:block;overflow-x:auto;padding:.5em}.hljs-name{color:#01a3a3}.hljs-meta,.hljs-tag{color:#789}.hljs,.hljs-subst{color:#444}.hljs-comment{color:#888}.hljs-deletion,.hljs-number,.hljs-quote,.hljs-selector-class,.hljs-selector-id,.hljs-string,.hljs-template-tag,.hljs-type{color:#4286f4}.hljs-section,.hljs-title{color:#4286f4;font-weight:700}.hljs-link,.hljs-regexp,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-symbol,.hljs-template-variable,.hljs-variable{color:#BC6060}.hljs-literal{color:#62bcbc}.hljs-addition,.hljs-built_in,.hljs-bullet,.hljs-code{color:#25c6c6}.hljs-meta-string{color:#4d99bf}.hljs-emphasis{font-style:italic} */
+  .hljs{display:block;overflow-x:auto;padding:0.5em;color:black}.hljs-link,.hljs-emphasis,.hljs-attribute,.hljs-addition{color:#070}.hljs-emphasis{font-style:italic}.hljs-strong,.hljs-string,.hljs-deletion{color:#d14}.hljs-strong{font-weight:bold}.hljs-quote,.hljs-comment{color:#998;font-style:italic}.hljs-section,.hljs-title{color:#900}.hljs-class .hljs-title,.hljs-type{color:#458}.hljs-variable,.hljs-template-variable{color:#336699}.hljs-bullet{color:#997700}.hljs-meta{color:#3344bb}.hljs-code,.hljs-number,.hljs-literal,.hljs-keyword,.hljs-selector-tag{color:#099}.hljs-regexp{background-color:#fff0ff;color:#880088}.hljs-symbol{color:#990073}.hljs-tag,.hljs-name,.hljs-selector-id,.hljs-selector-class{color:#007700}
   code {
     font-size: 14px;
+    overflow: hidden;
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   }
-  code.html {
+  code.html,
+  code.other,
+  code.javascript {
     padding: 20px 0.5em;
   }
-  .hljs {
+  /* .hljs {
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
+  } */
   .zp-input,
   input[type="text"] {
     height: 25px;
@@ -401,5 +413,11 @@
     -webkit-transform: translateY(-30px);
     transform: translateY(-30px);
     opacity: 0;
+  }
+  .figure .zp-scroller-content {
+    height: 300px;
+  }
+  .figure .zp-scroller-content code:before {
+    position: fixed;
   }
 </style>
